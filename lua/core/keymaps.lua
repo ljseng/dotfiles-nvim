@@ -35,10 +35,24 @@ map('n', '<leader>f', ':find<space>')           -- find file
 -- --------------------------------------------------------------------------------------------
 -- buffers management
 -- --------------------------------------------------------------------------------------------
-map('n', '<leader>bb', ':ls!<CR>')              -- list all buffers
-map('n', '<leader>bd', ':bdelete<CR>')          -- delete buffer
-map('n', '<leader>bp', ':bprevious<CR>')        -- go to previous buffer
-map('n', '<leader>bn', ':bnext<CR>')            -- go to next buffer
+map('n', '<leader>bb', ':ls!<CR>')                       -- list all buffers
+map('n', '<leader>bc', '<Cmd>BufferClose<CR>')           -- close buffer
+map('n', '<leader>bp', '<Cmd>BufferPrevious<CR>')        -- go to previous buffer
+map('n', '<leader>bn', '<Cmd>BufferNext<CR>')            -- go to next buffer
+map('n', '<leader>b,', '<Cmd>BufferMovePrevious<CR>')    -- move buffer previous
+map('n', '<leader>b.', '<Cmd>BufferMoveNext<CR>')        -- move buffer next
+
+-- go to N buffer
+map('n', '<leader>b1', '<Cmd>BufferGoto 1<CR>')        
+map('n', '<leader>b2', '<Cmd>BufferGoto 2<CR>')        
+map('n', '<leader>b3', '<Cmd>BufferGoto 3<CR>')        
+map('n', '<leader>b4', '<Cmd>BufferGoto 4<CR>')        
+map('n', '<leader>b5', '<Cmd>BufferGoto 5<CR>')        
+map('n', '<leader>b6', '<Cmd>BufferGoto 6<CR>')        
+map('n', '<leader>b7', '<Cmd>BufferGoto 7<CR>')        
+map('n', '<leader>b8', '<Cmd>BufferGoto 8<CR>')        
+map('n', '<leader>b9', '<Cmd>BufferGoto 9<CR>')        
+map('n', '<leader>b0', '<Cmd>BufferLast<CR>')        
 
 -- split buffers
 map('n', '<leader>es', '<C-w>v')                -- split buffer vertically

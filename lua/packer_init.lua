@@ -34,6 +34,11 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim'
     }
 
+    -- barbar - a better way to manage buffers
+    use {
+        'romgrk/barbar.nvim'
+    }
+
     -- automatically set up configuration after cloning packer.nvim
     -- put this at the end after all plugins
     if packer_bootstrap then
