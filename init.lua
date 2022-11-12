@@ -7,3 +7,4 @@ require('plugins/lualine-cfg')
 
 -- initialize packer
 require('packer_init')
+

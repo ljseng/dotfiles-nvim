@@ -45,3 +45,5 @@ o.shiftwidth = 4
 o.tabstop = 4
 o.autoindent = true
 o.smartindent = true
+
+vim.notify = require('notify')      -- notification
