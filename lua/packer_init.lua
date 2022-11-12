@@ -16,12 +16,17 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    -- nvim-tree - file explorer
+    -- nvim-tree - a better file explorer
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+            'nvim-tree/nvim-web-devicons'
         }
+    }
+
+    -- lualine - a better statusline
+    use {
+        'nvim-lualine/lualine.nvim'
     }
 
     -- automatically set up configuration after cloning packer.nvim
