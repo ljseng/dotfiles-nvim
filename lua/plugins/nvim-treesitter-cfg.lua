@@ -1,9 +1,11 @@
 require("nvim-treesitter.configs").setup {
-    ensure_installed = { "c", "lua", "php", "javascript", "html", "css", "markdown", "markdown_inline" },
+    ensure_installed = { "c", "lua", "comment", "php", "javascript", "html", "css", "markdown", "markdown_inline" },
     sync_install = false, -- install async (faster)
     auto_install = true,
     highlight = {
         enable = true, -- `false` will disable the whole extension
+
+        -- TODO: i do not understand function below. study it
         -- or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
         disable = function(lang, buf)
             local max_filesize = 100 * 1024 -- 100 KB
