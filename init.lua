@@ -8,4 +8,5 @@ require('core/keymaps')
 require('plugins/nvim-tree-cfg')
 require('plugins/lualine-cfg')
 require('plugins/barbar-cfg')
+require('plugins/nvim-treesitter-cfg')
 

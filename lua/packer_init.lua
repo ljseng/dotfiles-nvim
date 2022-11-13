@@ -44,6 +44,12 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- treesitter - a better syntax highlighting
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
     -- automatically set up configuration after cloning packer.nvim
     -- put this at the end after all plugins
     if packer_bootstrap then
