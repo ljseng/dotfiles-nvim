@@ -16,10 +16,8 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
-    -- nvim-notify - notification
-    use {
-        "rcarriga/nvim-notify"
-    }
+    -- colorscheme
+    use 'sainnhe/everforest'
 
     -- nvim-tree - a better file explorer
     use {
@@ -29,15 +27,14 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- nvim-notify - notification
+    use "rcarriga/nvim-notify"
+
     -- lualine - a better statusline
-    use {
-        'nvim-lualine/lualine.nvim'
-    }
+    use 'nvim-lualine/lualine.nvim'
 
     -- barbar - a better way to manage buffers
-    use {
-        'romgrk/barbar.nvim'
-    }
+    use 'romgrk/barbar.nvim'
 
     -- telescope - a powerful way to fuzzy find files
     use {
@@ -45,10 +42,6 @@ return require('packer').startup(function(use)
         requires = {
             'nvim-lua/plenary.nvim'
         }
-    }
-
-    use {
-        'sainnhe/everforest'
     }
 
     -- automatically set up configuration after cloning packer.nvim
