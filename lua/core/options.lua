@@ -1,7 +1,7 @@
 local o = vim.opt
 local g = vim.g
 
--- disable netrw in favor of nvim-tree
+-- disable netrw in favor of nvim-tree plugin
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
@@ -34,7 +34,7 @@ o.foldmethod = 'manual'           -- code folding
 o.listchars = 'eol:¶,space:␣'     -- to better identify whitespace
 
 o.termguicolors = true
-vim.cmd('colorscheme everforest')
+vim.cmd('colorscheme everforest') -- colorscheme with plugin
 
 -- searching
 o.hlsearch = true
@@ -49,4 +49,4 @@ o.tabstop = 4
 o.autoindent = true
 o.smartindent = true
 
-vim.notify = require('notify')      -- notification
+vim.notify = require('notify')      -- notification with notify plugin
