@@ -33,6 +33,9 @@ o.linebreak = true                -- wrap on word boundary
 o.foldmethod = 'manual'           -- code folding
 o.listchars = 'eol:¶,space:␣'     -- to better identify whitespace
 
+o.termguicolors = true
+vim.cmd('colorscheme everforest')
+
 -- searching
 o.hlsearch = true
 o.incsearch = true

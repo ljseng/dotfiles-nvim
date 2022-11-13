@@ -39,6 +39,18 @@ return require('packer').startup(function(use)
         'romgrk/barbar.nvim'
     }
 
+    -- telescope - a powerful way to fuzzy find files
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
+
+    use {
+        'sainnhe/everforest'
+    }
+
     -- automatically set up configuration after cloning packer.nvim
     -- put this at the end after all plugins
     if packer_bootstrap then

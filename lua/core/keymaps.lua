@@ -30,10 +30,9 @@ map('n', 'N', 'Nzzzv')                          -- go to to previous search and 
 map('n', '<leader>w', ':w<CR>')                 -- save file
 map('n', '<leader>q', ':q<CR>')                 -- quit file
 map('n', '<leader>Q', ':q!<CR>')                -- quit file dumping changes
-map('n', '<leader>f', ':find<space>')           -- find file
 
 -- --------------------------------------------------------------------------------------------
--- buffers management
+-- buffers management (with barbar)
 -- --------------------------------------------------------------------------------------------
 map('n', '<leader>bb', ':ls!<CR>')                       -- list all buffers
 map('n', '<leader>bc', '<Cmd>BufferClose<CR>')           -- close buffer
@@ -93,7 +92,15 @@ map('n', '<leader>vw', ':set wrap!<CR>')        -- toggle line wrap
 map('n', '<leader>vs', ':nohl<CR>')             -- clear search highlight
 
 -- --------------------------------------------------------------------------------------------
--- netrw
+-- nvim-tree
 -- --------------------------------------------------------------------------------------------
 map('n', '<leader>ee', ':NvimTreeFindFileToggle<CR>')         -- open nvim-tree
 
+-- --------------------------------------------------------------------------------------------
+-- telescope
+-- --------------------------------------------------------------------------------------------
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})       -- fuzzy find files
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})        -- grep within directory.external dependency: ripgrep
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>ft', builtin.help_tags, {})
