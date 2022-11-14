@@ -17,6 +17,16 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>gc', vim.lsp.buf.code_action, bufopts)
 end
 
+require('cmp').setup {
+  sources = {
+    { name = 'nvim_lsp' }
+  }
+}
+
+-- the nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 require('lspconfig').phpactor.setup {
-    on_attach = on_attach
+    on_attach = on_attach,
+    capabilities = capabilities
 }
