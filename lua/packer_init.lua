@@ -50,6 +50,11 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
+    -- language server protocol
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+    use 'neovim/nvim-lspconfig'
+
     -- automatically set up configuration after cloning packer.nvim
     -- put this at the end after all plugins
     if packer_bootstrap then
