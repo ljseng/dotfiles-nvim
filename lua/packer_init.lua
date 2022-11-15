@@ -55,6 +55,10 @@ return require('packer').startup(function(use)
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
 
+    -- autocomplete
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/nvim-cmp'
+
     -- automatically set up configuration after cloning packer.nvim
     -- put this at the end after all plugins
     if packer_bootstrap then
