@@ -13,5 +13,6 @@ if not vim.g.vscode then
     require('plugins/barbar-cfg')
     require('plugins/nvim-treesitter-cfg')
     require('plugins/lsp-cfg')
+    require('plugins/toggleterm-cfg')
 end
 

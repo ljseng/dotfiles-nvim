@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
     use "rcarriga/nvim-notify"
 
     -- lualine - a better statusline
+    --
     use 'nvim-lualine/lualine.nvim'
 
     -- barbar - a better way to manage buffers
@@ -58,6 +59,9 @@ return require('packer').startup(function(use)
     -- autocomplete
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
+
+    -- toggleterm
+    use 'akinsho/toggleterm.nvim'
 
     -- automatically set up configuration after cloning packer.nvim
     -- put this at the end after all plugins
