@@ -28,10 +28,9 @@ return require('packer').startup(function(use)
     }
 
     -- nvim-notify - notification
-    use "rcarriga/nvim-notify"
+    use 'rcarriga/nvim-notify'
 
     -- lualine - a better statusline
-    --
     use 'nvim-lualine/lualine.nvim'
 
     -- barbar - a better way to manage buffers
