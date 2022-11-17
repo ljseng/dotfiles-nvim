@@ -1,6 +1,6 @@
 require('toggleterm').setup {
     direction = 'float',
-    open_mapping = [[<C-\>]],
+    open_mapping = [[<A-\>]],
 }
 
 local Terminal  = require('toggleterm.terminal').Terminal
@@ -10,4 +10,4 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<C-g>", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<A-1>", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
