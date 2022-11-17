@@ -36,14 +36,6 @@ return require('packer').startup(function(use)
     -- barbar - a better way to manage buffers
     use 'romgrk/barbar.nvim'
 
-    -- telescope - a powerful way to fuzzy find files
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim'
-        }
-    }
-
     -- treesitter - a better syntax highlighting
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -58,6 +50,17 @@ return require('packer').startup(function(use)
     -- autocomplete
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
+
+    -- gitsigns
+    use 'lewis6991/gitsigns.nvim'
+
+    -- telescope - a powerful way to fuzzy find files
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
 
     -- toggleterm
     use 'akinsho/toggleterm.nvim'
