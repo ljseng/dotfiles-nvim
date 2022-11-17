@@ -5,16 +5,17 @@
 
 ## Plugin and external dependency
 
-| Plugin                                                                                  | Purpose                          | Dependency |
-| --------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| `wbthomason/packer.nvim`                                                                | Plugin manager                   | NA         |
-| `sainnhe/everforest`                                                                    | Theming                          | NA         |
-| `nvim-tree/nvim-tree.lua`                                                               | File explorer with git support   | NA         |
-| `rcarriga/nvim-notify`                                                                  | Notification bubble              | NA         |
-| `nvim-lualine/lualine.nvim`                                                             | Must better statusline           | NA         |
-| `romgrk/barbar.nvim`                                                                    | Much better way to handle buffer | NA         |
-| `nvim-telescope/telescope.nvim`                                                         | Very powerful fuzzy find files   | `ripgrep`  |
-| `nvim-treesitter/nvim-treesitter`                                                       | For accurate syntax highlighting | NA         |
-| `williamboman/mason.nvim`, `williamboman/mason-lspconfig.nvim`, `neovim/nvim-lspconfig` | Language Server Protocol         | `phpactor` |
-| `hrsh7th/cmp-nvim-lsp`, `hrsh7th/nvim-cmp`                                              | Autocomplete engine              | NA         |
-| `akinsho/toggleterm.nvim`                                                               | For better terminal experience   | `lazygit`  |
+| Plugin                                                                                  | Purpose                                  | Dependency |
+| --------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
+| `wbthomason/packer.nvim`                                                                | Plugin manager                           | NA         |
+| `sainnhe/everforest`                                                                    | Theming                                  | NA         |
+| `nvim-tree/nvim-tree.lua`                                                               | File explorer with git support           | NA         |
+| `rcarriga/nvim-notify`                                                                  | Notification bubble                      | NA         |
+| `nvim-lualine/lualine.nvim`                                                             | Must better statusline                   | NA         |
+| `romgrk/barbar.nvim`                                                                    | Much better way to handle buffer         | NA         |
+| `nvim-telescope/telescope.nvim`                                                         | Very powerful fuzzy find files           | `ripgrep`  |
+| `nvim-treesitter/nvim-treesitter`                                                       | For accurate syntax highlighting         | NA         |
+| `williamboman/mason.nvim`, `williamboman/mason-lspconfig.nvim`, `neovim/nvim-lspconfig` | Language Server Protocol                 | `phpactor` |
+| `hrsh7th/cmp-nvim-lsp`, `hrsh7th/nvim-cmp`                                              | Autocomplete engine                      | NA         |
+| `akinsho/toggleterm.nvim`                                                               | For better terminal experience           | `lazygit`  |
+| `lewis6991/gitsigns.nvim`                                                               | Preview and manage git changes in buffer | NA         |
