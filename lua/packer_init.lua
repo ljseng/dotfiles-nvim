@@ -53,8 +53,8 @@ return require('packer').startup(function(use)
 
     -- navic - get code context
     use {
-        "SmiteshP/nvim-navic",
-        requires = "neovim/nvim-lspconfig"
+        'SmiteshP/nvim-navic',
+        requires = 'neovim/nvim-lspconfig'
     }
 
     -- gitsigns
