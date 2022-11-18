@@ -50,3 +50,5 @@ o.autoindent = true
 o.smartindent = true
 
 vim.notify = require('notify')      -- notification with notify plugin
+
+vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}') -- highlight yanked text briefly
