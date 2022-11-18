@@ -4,8 +4,6 @@ require('mason-lspconfig').setup {
     automatic_installation = true
 }
 
-local navic = require("nvim-navic")
-
 -- lsp specific keymaps and settings
 -- use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -21,9 +19,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<leader>gc', vim.lsp.buf.code_action, bufopts)
 
-  if client.server_capabilities.documentSymbolProvider then
-      navic.attach(client, bufnr)
-  end
 end
 
 -- autocomplete specific settings

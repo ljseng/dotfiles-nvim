@@ -15,5 +15,6 @@ if not vim.g.vscode then
     require('plugins/lsp-cfg')
     require('plugins/toggleterm-cfg')
     require('plugins/gitsigns-cfg')
+    require('plugins/aerial-cfg')
 end
 

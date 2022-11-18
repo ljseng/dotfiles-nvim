@@ -51,12 +51,6 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
 
-    -- navic - get code context
-    use {
-        'SmiteshP/nvim-navic',
-        requires = 'neovim/nvim-lspconfig'
-    }
-
     -- gitsigns
     use 'lewis6991/gitsigns.nvim'
 
@@ -67,6 +61,9 @@ return require('packer').startup(function(use)
             'nvim-lua/plenary.nvim'
         }
     }
+
+    -- aerial - for code outline
+    use 'stevearc/aerial.nvim'
 
     -- toggleterm
     use 'akinsho/toggleterm.nvim'

@@ -12,13 +12,13 @@ require('lualine').setup {
     winbar = {
         lualine_c = {
             'filename',
-            "%{%v:lua.require'nvim-navic'.get_location()%}" -- display code context (using nvim-navic) at winbar
-        } 
+            'aerial'
+        },
     },
     inactive_winbar = {
         lualine_c = {
             'filename',
-            "%{%v:lua.require'nvim-navic'.get_location()%}" -- display code context (using nvim-navic) at winbar
-        } 
+            'aerial'
+        },
     }
 }

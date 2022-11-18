@@ -17,6 +17,6 @@
 | `nvim-treesitter/nvim-treesitter`                                                       | For accurate syntax highlighting         | NA         |
 | `williamboman/mason.nvim`, `williamboman/mason-lspconfig.nvim`, `neovim/nvim-lspconfig` | Language Server Protocol                 | `phpactor` |
 | `hrsh7th/cmp-nvim-lsp`, `hrsh7th/nvim-cmp`                                              | Autocomplete engine                      | NA         |
-| `SmiteshP/nvim-navic`                                                                   | To know code context                     | NA         |
+| `stevearc/aerial.nvim`                                                                  | To get code context/outline              | NA         |
 | `akinsho/toggleterm.nvim`                                                               | For better terminal experience           | `lazygit`  |
 | `lewis6991/gitsigns.nvim`                                                               | Preview and manage git changes in buffer | NA         |

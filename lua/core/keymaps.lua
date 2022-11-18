@@ -105,3 +105,8 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})       -- fuzzy find fi
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})        -- grep within directory.external dependency: ripgrep
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>ft', builtin.help_tags, {})
+
+-- --------------------------------------------------------------------------------------------
+-- aerial
+-- --------------------------------------------------------------------------------------------
+vim.keymap.set('n', '<leader>/', '<cmd>AerialToggle!<CR>')
