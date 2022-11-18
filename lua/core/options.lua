@@ -11,7 +11,7 @@ o.clipboard = 'unnamedplus'                   -- use system clipboard
 o.swapfile = false                            -- disable swap file
 o.completeopt = 'menuone,noinsert,noselect'   -- insert mode autocomplete options
 
-vim.cmd(':set path+=**')          -- find a file recursively
+o.path:append { '**' }            -- find a file recursively
 
 -- memory
 o.hidden = true                   -- hide buffer if abondoned
