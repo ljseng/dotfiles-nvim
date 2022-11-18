@@ -51,6 +51,12 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
 
+    -- navic - get code context
+    use {
+        "SmiteshP/nvim-navic",
+        requires = "neovim/nvim-lspconfig"
+    }
+
     -- gitsigns
     use 'lewis6991/gitsigns.nvim'
 
