@@ -67,9 +67,16 @@ return require('packer').startup(function(use)
     -- aerial - for code outline
     use 'stevearc/aerial.nvim'
 
+    -- autopairs
     use {
         'windwp/nvim-autopairs',
         config = function() require('nvim-autopairs').setup {} end
+    }
+
+    -- auto comment
+    use {
+        'terrortylor/nvim-comment',
+        config = function() require('nvim_comment').setup {} end
     }
 
     -- toggleterm
