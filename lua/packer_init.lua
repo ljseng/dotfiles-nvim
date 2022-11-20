@@ -79,6 +79,8 @@ return require('packer').startup(function(use)
         config = function() require('nvim_comment').setup {} end
     }
 
+    use 'rafamadriz/friendly-snippets'
+
     -- toggleterm
     use 'akinsho/toggleterm.nvim'
 

@@ -17,5 +17,6 @@ if not vim.g.vscode then
     require('plugins/gitsigns-cfg')
     require('plugins/aerial-cfg')
     require('plugins/telescope-cfg')
+    require('plugins/luasnip-cfg')
 end
 
