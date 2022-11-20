@@ -79,6 +79,7 @@ return require('packer').startup(function(use)
         config = function() require('nvim_comment').setup {} end
     }
 
+    -- friendly snippet - snippet to write code faster
     use 'rafamadriz/friendly-snippets'
 
     -- toggleterm

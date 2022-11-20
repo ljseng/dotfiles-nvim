@@ -20,3 +20,4 @@
 | `stevearc/aerial.nvim`                                                                  | To get code context/outline              | NA         |
 | `akinsho/toggleterm.nvim`                                                               | For better terminal experience           | `lazygit`  |
 | `lewis6991/gitsigns.nvim`                                                               | Preview and manage git changes in buffer | NA         |
+| `rafamadriz/friendly-snippets`                                                          | Snippet to write code faster             | NA         |
