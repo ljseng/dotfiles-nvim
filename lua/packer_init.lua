@@ -67,6 +67,9 @@ return require('packer').startup(function(use)
     -- aerial - for code outline
     use 'stevearc/aerial.nvim'
 
+    -- nvim_context_vt
+    use 'haringsrob/nvim_context_vt'
+
     -- autopairs
     use {
         'windwp/nvim-autopairs',
