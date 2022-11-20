@@ -22,7 +22,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- autocomplete specific settings
-local luasnip = require("luasnip")
+local luasnip = require('luasnip')
 local cmp = require('cmp');
 cmp.setup {
     mapping = cmp.mapping.preset.insert({
@@ -33,7 +33,7 @@ cmp.setup {
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
         -- use tab and shift tab to cycle through suggestion list
-        ["<Tab>"] = cmp.mapping(function(fallback)
+        ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
             elseif luasnip.expand_or_jumpable() then
@@ -41,8 +41,8 @@ cmp.setup {
             else
                 fallback()
             end
-        end, { "i", "s" }),
-        ["<S-Tab>"] = cmp.mapping(function(fallback)
+        end, { 'i', 's' }),
+        ['<S-Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
             elseif luasnip.jumpable(-1) then
@@ -50,7 +50,7 @@ cmp.setup {
             else
                 fallback()
             end
-        end, { "i", "s" }),
+        end, { 'i', 's' }),
     }),
     snippet = {
         expand = function(args)
