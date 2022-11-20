@@ -16,5 +16,6 @@ if not vim.g.vscode then
     require('plugins/toggleterm-cfg')
     require('plugins/gitsigns-cfg')
     require('plugins/aerial-cfg')
+    require('plugins/telescope-cfg')
 end
 
