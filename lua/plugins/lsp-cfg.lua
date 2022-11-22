@@ -8,17 +8,17 @@ require('mason-lspconfig').setup {
 -- use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+    local bufopts = { noremap=true, silent=true, buffer=bufnr }
 
-  vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, bufopts)
-  vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<leader>gk', vim.lsp.buf.hover, bufopts)
-  vim.keymap.set('n', '<leader>gn', vim.lsp.buf.rename, bufopts)
-  vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<leader>gc', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, bufopts)
+    vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, bufopts)
+    vim.keymap.set('n', '<leader>gk', vim.lsp.buf.hover, bufopts)
+    vim.keymap.set('n', '<leader>gi', '<Cmd>Trouble lsp_implementations<CR>')
+    vim.keymap.set('n', '<leader>gr', '<Cmd>Trouble lsp_references<CR>', bufopts)
+    vim.keymap.set('n', '<leader>gn', vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', '<leader>gc', vim.lsp.buf.code_action, bufopts)
 
 end
 
