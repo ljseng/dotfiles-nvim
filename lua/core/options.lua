@@ -32,6 +32,7 @@ o.ruler = true                    -- show ruler at status line
 o.linebreak = true                -- wrap on word boundary
 o.foldmethod = 'manual'           -- code folding
 o.listchars = 'eol:¶,space:␣'     -- to better identify whitespace
+o.signcolumn = 'auto:4'           -- auto resize sign column up to given number. for: gitsigns, marks
 
 o.termguicolors = true
 vim.cmd('colorscheme everforest') -- colorscheme with plugin

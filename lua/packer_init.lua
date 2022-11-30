@@ -79,6 +79,9 @@ return require('packer').startup(function(use)
         config = function() require('nvim-autopairs').setup {} end
     }
 
+    -- marks - better experience using marks
+    use 'chentoast/marks.nvim'
+
     -- auto comment
     use {
         'terrortylor/nvim-comment',
