@@ -95,6 +95,16 @@ return require('packer').startup(function(use)
     -- toggleterm
     use 'akinsho/toggleterm.nvim'
 
+    use {
+        'jackMort/ChatGPT.nvim',
+        config = function() require('chatgpt').setup() end,
+        requires = {
+            'MunifTanjim/nui.nvim',
+            'nvim-lua/plenary.nvim',
+            'nvim-telescope/telescope.nvim'
+        }
+    }
+
     -- automatically set up configuration after cloning packer.nvim
     -- put this at the end after all plugins
     if packer_bootstrap then

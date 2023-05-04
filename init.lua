@@ -19,5 +19,6 @@ if not vim.g.vscode then
     require('plugins/telescope-cfg')
     require('plugins/luasnip-cfg')
     require('plugins/marks-cfg')
+    require('plugins/chatgpt')
 end
 
