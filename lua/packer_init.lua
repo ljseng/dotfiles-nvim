@@ -95,6 +95,7 @@ return require('packer').startup(function(use)
     -- toggleterm
     use 'akinsho/toggleterm.nvim'
 
+    -- chatgpt
     use {
         'jackMort/ChatGPT.nvim',
         config = function() require('chatgpt').setup() end,
