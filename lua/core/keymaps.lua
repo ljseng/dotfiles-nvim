@@ -110,7 +110,8 @@ map('n', '<leader>eE', ':NvimTreeClose<CR>')        -- close nvim-tree
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})       -- fuzzy find files
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})        -- grep within directory.external dependency: ripgrep
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})          -- find buffers
+vim.keymap.set('n', '<leader>fc', builtin.commands, {})         -- find commands
 vim.keymap.set('n', '<leader>ft', '<Cmd>Telescope aerial<CR>', {})
 
 -- --------------------------------------------------------------------------------------------
