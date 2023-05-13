@@ -101,8 +101,7 @@ map('n', '<leader>vs', ':nohl<CR>')             -- clear search highlight
 -- --------------------------------------------------------------------------------------------
 -- nvim-tree
 -- --------------------------------------------------------------------------------------------
-map('n', '<leader>ee', ':NvimTreeFindFile<CR>')     -- open nvim-tree and focus on the file
-map('n', '<leader>eE', ':NvimTreeClose<CR>')        -- close nvim-tree
+map('n', '<leader>ee', ':NvimTreeFindFileToggle<CR>')     -- open nvim-tree and focus on the file
 
 -- --------------------------------------------------------------------------------------------
 -- telescope
