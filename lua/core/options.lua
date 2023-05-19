@@ -50,7 +50,22 @@ o.tabstop = 4
 o.autoindent = true
 o.smartindent = true
 
-vim.notify = require('notify')      -- notification with notify plugin
-
 vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=200}') -- highlight yanked text briefly
 
+vim.notify = require('notify')      -- notification with notify plugin
+
+-- autocmd
+
+-- to notify when a buffer is written
+vim.api.nvim_create_autocmd('BufWritePost', {
+    group = vim.api.nvim_create_augroup('MyBufWritePost', { clear = true }),
+    callback = function()
+        local current_buffer_full_name = vim.api.nvim_buf_get_name(0)
+        local current_buffer_relative_name = vim.fn.fnamemodify(current_buffer_full_name, ':~:.')
+        local notify_msg = string.format("%s successfully written!", current_buffer_relative_name)
+
+        vim.notify(notify_msg, 'info', {
+            title = 'Buffer written'
+        })
+    end,
+})
