@@ -20,5 +20,6 @@ if not vim.g.vscode then
     require('plugins/luasnip-cfg')
     require('plugins/marks-cfg')
     require('plugins/chatgpt')
+    require('plugins/nvim-notify-cfg')
 end
 
