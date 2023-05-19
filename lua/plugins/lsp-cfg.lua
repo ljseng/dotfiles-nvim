@@ -67,6 +67,20 @@ cmp.setup {
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('lspconfig').phpactor.setup {
+    root_dir = function() return vim.loop.cwd() end,
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+require('lspconfig').emmet_ls.setup {
+    root_dir = function() return vim.loop.cwd() end,
+    filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+require('lspconfig').lua_ls.setup {
+    root_dir = function() return vim.loop.cwd() end,
     on_attach = on_attach,
     capabilities = capabilities
 }
