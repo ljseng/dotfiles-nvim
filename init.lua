@@ -1,7 +1,7 @@
 -- initialize packer
 if not vim.g.vscode then
     require('packer_init')
-end 
+end
 
 require('core/options')
 require('core/keymaps')
@@ -20,5 +20,6 @@ if not vim.g.vscode then
     require('plugins/luasnip-cfg')
     require('plugins/marks-cfg')
     require('plugins/nvim-notify-cfg')
+    require('plugins/trouble-cfg')
 end
 
