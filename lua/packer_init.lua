@@ -98,7 +98,13 @@ return require('packer').startup(function(use)
     -- chatgpt
     use {
         'jackMort/ChatGPT.nvim',
-        config = function() require('chatgpt').setup() end,
+        config = function() require('chatgpt').setup({
+            -- TODO: move into its own configuration file. for unknown reason, must be put here to get it to work
+            popup_input = {
+                submit = "<CR>",        -- when prompting, in insert mode, <Enter> to send the prompt. <C-Enter> to insert new line (multiline prompt)
+                submit_n = "<Enter>",   -- when prompting, in normal mode, <Enter> to send the prompt.
+            },
+        }) end,
         requires = {
             'MunifTanjim/nui.nvim',
             'nvim-lua/plenary.nvim',
