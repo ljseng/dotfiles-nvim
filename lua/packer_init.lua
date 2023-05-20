@@ -17,8 +17,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- colorscheme
-    -- use 'sainnhe/everforest'
-    use 'Mofiqul/dracula.nvim'
+    use 'sainnhe/everforest'
 
     -- nvim-tree - a better file explorer
     use {

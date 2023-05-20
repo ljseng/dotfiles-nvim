@@ -34,8 +34,9 @@ o.foldmethod = 'manual'           -- code folding
 o.listchars = 'eol:¶,space:␣'     -- to better identify whitespace
 o.signcolumn = 'auto:4'           -- auto resize sign column up to given number. for: gitsigns, marks
 
--- o.termguicolors = true
-vim.cmd('colorscheme dracula-soft') -- colorscheme with plugin
+-- colorscheme with plugin
+o.termguicolors = true
+vim.cmd('colorscheme everforest')
 
 -- searching
 o.hlsearch = true
