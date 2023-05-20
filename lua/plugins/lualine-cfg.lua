@@ -1,6 +1,6 @@
 require('lualine').setup {
     options = {
-        icons_enabled = true,
+        icons_enabled = false,
         disabled_filetypes = { 'NvimTree' } -- do not show lualine in these places
     },
     sections = {
