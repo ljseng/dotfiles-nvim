@@ -1,6 +1,9 @@
 local o = vim.opt
 local g = vim.g
 
+-- enable project based vimrc
+o.exrc = true
+
 -- disable netrw in favor of nvim-tree plugin
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
@@ -58,15 +61,15 @@ vim.notify = require('notify')      -- notification with notify plugin
 -- autocmd
 
 -- to notify when a buffer is written
-vim.api.nvim_create_autocmd('BufWritePost', {
-    group = vim.api.nvim_create_augroup('MyBufWritePost', { clear = true }),
-    callback = function()
-        local current_buffer_full_name = vim.api.nvim_buf_get_name(0)
-        local current_buffer_relative_name = vim.fn.fnamemodify(current_buffer_full_name, ':~:.')
-        local notify_msg = string.format("%s successfully written!", current_buffer_relative_name)
-
-        vim.notify(notify_msg, 'info', {
-            title = 'Buffer written'
-        })
-    end,
-})
+-- vim.api.nvim_create_autocmd('BufWritePost', {
+--     group = vim.api.nvim_create_augroup('MyBufWritePost', { clear = true }),
+--     callback = function()
+--         local current_buffer_full_name = vim.api.nvim_buf_get_name(0)
+--         local current_buffer_relative_name = vim.fn.fnamemodify(current_buffer_full_name, ':~:.')
+--         local notify_msg = string.format("%s successfully written!", current_buffer_relative_name)
+--
+--         vim.notify(notify_msg, 'info', {
+--             title = 'Buffer written'
+--         })
+--     end,
+-- })
