@@ -93,10 +93,11 @@ map('n', '<leader>]', ']}zzzv')                 -- jump into code block end and 
 -- --------------------------------------------------------------------------------------------
 -- toggle
 -- --------------------------------------------------------------------------------------------
-map('n', '<leader>vc', ':set cul! cuc!<CR>')    -- highlight cursor line and column
-map('n', '<leader>vl', ':set list!<CR>')        -- show unprintable characters
-map('n', '<leader>vw', ':set wrap!<CR>')        -- toggle line wrap
-map('n', '<leader>vs', ':nohl<CR>')             -- clear search highlight
+map('n', '<leader>vc', ':set cul! cuc!<CR>')            -- highlight cursor line and column
+map('n', '<leader>vC', ':NvimContextVtToggle<CR>')      -- toggle code context
+map('n', '<leader>vl', ':set list!<CR>')                -- show unprintable characters
+map('n', '<leader>vw', ':set wrap!<CR>')                -- toggle line wrap
+map('n', '<leader>vs', ':nohl<CR>')                     -- clear search highlight
 
 -- --------------------------------------------------------------------------------------------
 -- nvim-tree

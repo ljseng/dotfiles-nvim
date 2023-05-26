@@ -21,5 +21,6 @@ if not vim.g.vscode then
     require('plugins/marks-cfg')
     require('plugins/nvim-notify-cfg')
     require('plugins/trouble-cfg')
+    require('plugins/nvim-context-vt-cfg')
 end
 
