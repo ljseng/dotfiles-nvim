@@ -108,14 +108,15 @@ map('n', '<leader>ee', ':NvimTreeFindFileToggle<CR>')     -- open nvim-tree and 
 -- telescope
 -- --------------------------------------------------------------------------------------------
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})       -- fuzzy find files
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})        -- grep within directory.external dependency: ripgrep
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})          -- find buffers
-vim.keymap.set('n', '<leader>fc', builtin.commands, {})         -- find commands
-vim.keymap.set('n', '<leader>fm', builtin.marks, {})            -- find marks
-vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})         -- find jumplist
-vim.keymap.set('n', '<leader>fr', builtin.registers, {})        -- find registers
-vim.keymap.set('n', '<leader>ft', '<Cmd>Telescope aerial<CR>', {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})                       -- fuzzy find files
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})                        -- grep within directory.external dependency: ripgrep
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})                          -- find buffers
+vim.keymap.set('n', '<leader>fc', builtin.commands, {})                         -- find commands
+vim.keymap.set('n', '<leader>fm', builtin.marks, {})                            -- find marks
+vim.keymap.set('n', '<leader>fn', '<Cmd>Telescope notify<CR>', {})              -- find marks
+vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})                         -- find jumplist
+vim.keymap.set('n', '<leader>fr', builtin.registers, {})                        -- find registers
+vim.keymap.set('n', '<leader>ft', '<Cmd>Telescope aerial<CR>', {})              -- find aerial
 
 -- --------------------------------------------------------------------------------------------
 -- aerial
