@@ -35,7 +35,7 @@ map('i', '<F1>', '<C-r>=system("date +%F | tr -d \'\\n\'")', { noremap = true, s
 -- --------------------------------------------------------------------------------------------
 map('n', '<leader>w', ':w<CR>')                 -- save file
 map('n', '<leader>q', ':q<CR>')                 -- quit file
-map('n', '<leader>Q', ':q!<CR>')                -- quit file dumping changes
+map('n', '<leader>Q', ':qa<CR>')                -- quit all
 
 -- --------------------------------------------------------------------------------------------
 -- buffers management (with barbar)
