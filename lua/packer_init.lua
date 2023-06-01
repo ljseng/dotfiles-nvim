@@ -88,6 +88,16 @@ return require('packer').startup(function(use)
         config = function() require('nvim_comment').setup {} end
     }
 
+    -- surround
+    use({
+        'kylechui/nvim-surround',
+        config = function()
+            require('nvim-surround').setup({
+                -- configuration here, or leave empty to use defaults
+            })
+        end
+    })
+
     -- friendly snippet - snippet to write code faster
     use 'rafamadriz/friendly-snippets'
 
