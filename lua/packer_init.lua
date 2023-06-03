@@ -19,6 +19,10 @@ return require('packer').startup(function(use)
     -- colorscheme
     use 'sainnhe/everforest'
 
+    use {
+        'stevearc/oil.nvim',
+    }
+
     -- nvim-tree - a better file explorer
     use {
         'nvim-tree/nvim-tree.lua',
