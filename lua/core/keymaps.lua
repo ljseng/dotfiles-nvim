@@ -23,12 +23,6 @@ vim.g.mapleader = ' '
 map('n', 'Y', 'y$')                             -- yank from current position to end of line
 
 -- --------------------------------------------------------------------------------------------
--- insert mode F1 - F12 mappings
--- --------------------------------------------------------------------------------------------
-map('i', '<F1>', '<C-r>=system("date \'+%F\' | tr -d \'\\n\'")', { noremap = true, silent = false })                -- get current date of format `yyyy-mm-dd` into current cursor position
-map('i', '<F2>', '<C-r>=system("date \'+%FT%H.%M.%S\' | tr -d \'\\n\'")', { noremap = true, silent = false })       -- get current datetime of format `yyyy-mm-ddThh:mm:ss` into current cursor position
-
--- --------------------------------------------------------------------------------------------
 -- manage file
 -- --------------------------------------------------------------------------------------------
 map('n', '<leader>w', ':w<CR>')                 -- save file
