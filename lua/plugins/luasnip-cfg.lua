@@ -73,6 +73,7 @@ ls.add_snippets(nil, {
             --      - 1: high priority
             --      - 2: medium priority
             --      - 3: low priority
+            text({'','assignee:    [leejun]'}),
             text({'','# priority:  3, 2, 1'}),
             text({'','priority:    '}), insert(3, '3'),
             -- tags:
