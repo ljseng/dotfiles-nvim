@@ -89,11 +89,11 @@ ls.add_snippets(nil, {
             text({'','---',''}),
 
             -- markdown template
-            text({'', '# information', ''}),            -- general information about the task
+            text({'', '# pre-mortem', ''}),            -- general information about the task
             insert(0),
-            text({'', '# todo', ''}),                   -- divide and conquer a task
-            text({'', '# log', ''}),                    -- any progressive update
-            text({'', '# conclusion', ''}),             -- concise summary. include action taken
+            text({'', '# todo', ''}),                  -- divide and conquer a task
+            text({'', '# braindump', ''}),             -- any progressive update
+            text({'', '# post-mortem', ''}),          -- concise summary. include action taken
         }),
     }
 })
