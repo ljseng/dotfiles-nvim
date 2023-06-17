@@ -25,7 +25,7 @@ ls.add_snippets(nil, {
         -- today's date
         snip({
             trig = '@today',
-            namr = 'Today date',
+            name = 'Today date',
             dscr = 'Today date in the form of YYYY-MM-DD',
         }, {
             func(
@@ -38,7 +38,7 @@ ls.add_snippets(nil, {
         -- today's datetime
         snip({
             trig = '@now',
-            namr = 'Today datetime',
+            name = 'Today datetime',
             dscr = 'Today datetime in the form of YYYY-MM-DDTH.M.S',
         }, {
             func(
@@ -48,12 +48,54 @@ ls.add_snippets(nil, {
                 , {}
             ),
         }),
+        -- uuid short
+        snip({
+            trig = '@uuid:short',
+            name = 'UUID short',
+            dscr = 'UUID short',
+        }, {
+            func(
+                function()
+                    local result = 'nil'
+
+                    local handle = io.popen("uuidgen | cut -d \\- -f1 | tr -d \\- | tr -d '\\n'")
+                    if (handle) then
+                        result = handle:read("*a")
+                        handle:close()
+                    end
+
+                    return { result }
+                end
+                , {}
+            ),
+        }),
+        -- uuid long
+        snip({
+            trig = '@uuid:long',
+            name = 'UUID long',
+            dscr = 'UUID long',
+        }, {
+            func(
+                function()
+                    local result = 'nil'
+
+                    local handle = io.popen("uuidgen | tr -d \\- | tr -d '\\n'")
+                    if (handle) then
+                        result = handle:read("*a")
+                        handle:close()
+                    end
+
+                    return { result }
+                end
+                , {}
+            ),
+        }),
     },
     markdown = {
         -- template for task
         snip({
             trig = '@t:task',
-            namr = 'Task template',
+            name = 'Task template',
             dscr = 'Task template',
         }, {
             -- yaml metadata
