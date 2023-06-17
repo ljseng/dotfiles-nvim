@@ -1,5 +1,23 @@
 require("nvim-treesitter.configs").setup {
-    ensure_installed = { "c", "lua", "comment", "php", "javascript", "html", "css", "sql", "markdown", "markdown_inline" },
+    ensure_installed = {
+		"awk",
+		"bash",
+		"comment",
+		"css",
+		"html",
+		"javascript",
+		"jsdoc",
+		"json",
+		"lua",
+		"markdown",
+		"markdown_inline",
+		"mermaid",
+		"php",
+		"sql",
+		"tsx",
+		"yaml",
+        "c",
+    },
     sync_install = false, -- install async (faster)
     auto_install = true,
     highlight = {
