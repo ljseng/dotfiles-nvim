@@ -84,3 +84,9 @@ require('lspconfig').lua_ls.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
+
+require('lspconfig').tsserver.setup {
+    root_dir = function() return vim.loop.cwd() end,
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
