@@ -114,7 +114,7 @@ vim.keymap.set('n', '<leader>fm', builtin.marks, {})                            
 vim.keymap.set('n', '<leader>fn', '<Cmd>Telescope notify<CR>', {})                              -- find marks
 vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})                                         -- find jumplist
 vim.keymap.set('n', '<leader>fr', builtin.registers, {})                                        -- find registers
-vim.keymap.set('n', '<leader>ft', '<Cmd>Telescope aerial<CR>', {})                              -- find aerial
+vim.keymap.set('n', '<leader>ft', '<Cmd>Telescope diagnostics<CR>', {})                         -- find aerial
 
 -- --------------------------------------------------------------------------------------------
 -- aerial
