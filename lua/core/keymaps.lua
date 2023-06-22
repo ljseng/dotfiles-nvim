@@ -108,6 +108,7 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})                                       -- fuzzy find files
 vim.keymap.set('n', '<leader>fF', '<Cmd>Telescope find_files hidden=true<CR>', {})              -- fuzzy find files including hidden files
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})                                        -- grep within directory.external dependency: ripgrep
+vim.keymap.set('n', '<leader>fG', '<Cmd>Telescope grep_string search_dirs=%:p<CR>', {})         -- grep word under cursor in current buffer.external dependency: ripgrep
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})                                          -- find buffers
 vim.keymap.set('n', '<leader>fc', builtin.commands, {})                                         -- find commands
 vim.keymap.set('n', '<leader>fm', builtin.marks, {})                                            -- find marks
