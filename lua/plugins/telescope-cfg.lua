@@ -11,6 +11,9 @@ telescope.setup {
         live_grep = {
             disable_devicons = true,
         },
+        grep_string = {
+            disable_devicons = true,
+        },
         buffers = {
             disable_devicons = true,
         },
