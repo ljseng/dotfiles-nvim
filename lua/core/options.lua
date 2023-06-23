@@ -49,8 +49,8 @@ o.smartcase = true
 
 -- indentation
 o.expandtab = true          -- use spaces for tab
-o.shiftwidth = 4
-o.tabstop = 4
+o.shiftwidth = 2
+o.tabstop = 2
 o.autoindent = true
 o.smartindent = true
 
