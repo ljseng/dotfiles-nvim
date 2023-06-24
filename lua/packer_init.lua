@@ -68,6 +68,9 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- indentation guideline
+    use 'lukas-reineke/indent-blankline.nvim'
+
     -- aerial - for code outline
     use 'stevearc/aerial.nvim'
 
