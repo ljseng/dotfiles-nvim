@@ -105,6 +105,9 @@ return require('packer').startup(function(use)
     -- friendly snippet - snippet to write code faster
     use 'rafamadriz/friendly-snippets'
 
+    -- mini
+    use 'echasnovski/mini.nvim'
+
     -- toggleterm
     use 'akinsho/toggleterm.nvim'
 
