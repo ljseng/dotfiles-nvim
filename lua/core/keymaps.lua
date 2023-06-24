@@ -115,13 +115,13 @@ vim.keymap.set('n', '<leader>fm', builtin.marks, {})                            
 vim.keymap.set('n', '<leader>fn', '<Cmd>Telescope notify<CR>', {})                              -- find marks
 vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})                                         -- find jumplist
 vim.keymap.set('n', '<leader>fr', builtin.registers, {})                                        -- find registers
-vim.keymap.set('n', '<leader>ft', '<Cmd>Telescope diagnostics<CR>', {})                         -- find aerial
+vim.keymap.set('n', '<leader>ft', '<Cmd>Telescope diagnostics<CR>', {})                         -- find diagnostics
+vim.keymap.set('n', '<leader>fa', '<Cmd>Telescope aerial<CR>', {})                              -- find aerial
 
 -- --------------------------------------------------------------------------------------------
 -- aerial
 -- --------------------------------------------------------------------------------------------
 vim.keymap.set('n', '<leader>/', '<cmd>AerialToggle!<CR>')      -- aerial code outline window at the right
-vim.keymap.set('n', '<leader>?', '<cmd>Telescope aerial<CR>')   -- open aerial code outline using telescope
 
 -- --------------------------------------------------------------------------------------------
 -- misc
