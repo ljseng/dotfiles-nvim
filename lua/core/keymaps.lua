@@ -120,7 +120,8 @@ vim.keymap.set('n', '<leader>ft', '<Cmd>Telescope diagnostics<CR>', {})         
 -- --------------------------------------------------------------------------------------------
 -- aerial
 -- --------------------------------------------------------------------------------------------
-vim.keymap.set('n', '<leader>/', '<cmd>AerialToggle!<CR>')
+vim.keymap.set('n', '<leader>/', '<cmd>AerialToggle!<CR>')      -- aerial code outline window at the right
+vim.keymap.set('n', '<leader>?', '<cmd>Telescope aerial<CR>')   -- open aerial code outline using telescope
 
 -- --------------------------------------------------------------------------------------------
 -- misc
