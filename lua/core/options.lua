@@ -24,19 +24,22 @@ o.lazyredraw = true               -- faster scrolling
 o.updatetime = 700                -- ms to wait for trigger an event
 
 -- user interface
-o.number = true                   -- show line number
-o.relativenumber = true           -- use relative line number
-o.scrolloff = 5                   -- number of lines visible above and below cursor
-o.showmatch = true                -- highlight matching parenthesis
-o.splitright = true               -- vertical split to right
-o.splitbelow = true               -- horizontal split to bottom
-o.laststatus = 2                  -- always show status line
-o.ruler = true                    -- show ruler at status line
-o.linebreak = true                -- wrap on word boundary
-o.foldmethod = 'manual'           -- code folding
-o.foldcolumn = 'auto'             -- code fold column
-o.listchars = 'eol:↴,space:⋅'     -- to better identify whitespace
-o.signcolumn = 'auto:4'           -- auto resize sign column up to given number. for: gitsigns, marks
+o.number         = true                            -- show line number
+o.relativenumber = true                            -- use relative line number
+o.scrolloff      = 5                               -- number of lines visible above and below cursor
+o.showmatch      = true                            -- highlight matching parenthesis
+o.splitright     = true                            -- vertical split to right
+o.splitbelow     = true                            -- horizontal split to bottom
+o.laststatus     = 2                               -- always show status line
+o.ruler          = true                            -- show ruler at status line
+o.linebreak      = true                            -- wrap on word boundary
+o.foldmethod     = 'expr'                          -- code folding
+o.foldexpr       = 'nvim_treesitter#foldexpr()'    -- code folding using treesitter
+o.foldcolumn     = 'auto'                          -- code fold column show when there is fold
+o.foldlevel      = 20                              -- code fold level to prevent open file with all folds closed
+o.foldlevelstart = 20                              -- code fold level to prevent open file with all folds closed
+o.listchars      = 'eol:↴,space:⋅'                 -- to better identify whitespace
+o.signcolumn     = 'auto:4'                        -- auto resize sign column up to given number. for: gitsigns, marks
 
 -- colorscheme with plugin
 o.termguicolors = true
