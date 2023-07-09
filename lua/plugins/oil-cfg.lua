@@ -1,7 +1,7 @@
 require("oil").setup {
     columns = {
         -- "icon",
-        "permissions",
+        -- "permissions",
         -- "size",
         -- "mtime",
     },
