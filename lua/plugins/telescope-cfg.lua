@@ -20,7 +20,6 @@ telescope.setup {
     },
 }
 
-telescope.load_extension('aerial')
 telescope.load_extension('notify')
 
 -- to workaround files open using telescope will not have fold calculated (probably due to treesitter not yet ready?)

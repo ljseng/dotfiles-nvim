@@ -106,18 +106,32 @@ map('n', '<leader>eo', ':Oil --float<CR>')                -- open oil floating w
 -- telescope
 -- --------------------------------------------------------------------------------------------
 local builtin = require('telescope.builtin')
+
+-- find files
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})                                       -- fuzzy find files
 vim.keymap.set('n', '<leader>fF', '<Cmd>Telescope find_files hidden=true<CR>', {})              -- fuzzy find files including hidden files
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})                                        -- grep within directory.external dependency: ripgrep
-vim.keymap.set('n', '<leader>fG', '<Cmd>Telescope grep_string search_dirs=%:p<CR>', {})         -- grep word under cursor in current buffer.external dependency: ripgrep
+
+-- grep for word
+vim.keymap.set('n', '<leader>fG', '<Cmd>Telescope grep_string search_dirs=%:p<CR>', {})         -- grep word under cursor in current buffer. external dependency: ripgrep
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})                                        -- grep within directory. external dependency: ripgrep
+
+-- lsp related
+vim.keymap.set('n', '<leader>fA', builtin.lsp_workspace_symbols, {})                            -- find workspace symbols
+vim.keymap.set('n', '<leader>fa', builtin.lsp_document_symbols, {})                             -- find document symbols
+vim.keymap.set('n', '<leader>fi', builtin.lsp_implementations, {})                              -- find implementation of the word under cursor
+vim.keymap.set('n', '<leader>fr', builtin.lsp_references, {})                                   -- find references for word under cursor
+vim.keymap.set('n', '<leader>ft', builtin.diagnostics, {})                                      -- find diagnostics
+
+-- extensions
+vim.keymap.set('n', '<leader>fn', '<Cmd>Telescope notify<CR>', {})                              -- find notifications
+
+-- misc
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})                                          -- find buffers
 vim.keymap.set('n', '<leader>fc', builtin.commands, {})                                         -- find commands
 vim.keymap.set('n', '<leader>fm', builtin.marks, {})                                            -- find marks
-vim.keymap.set('n', '<leader>fn', '<Cmd>Telescope notify<CR>', {})                              -- find marks
 vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})                                         -- find jumplist
-vim.keymap.set('n', '<leader>fr', builtin.registers, {})                                        -- find registers
-vim.keymap.set('n', '<leader>ft', '<Cmd>Telescope diagnostics<CR>', {})                         -- find diagnostics
-vim.keymap.set('n', '<leader>fa', '<Cmd>Telescope aerial<CR>', {})                              -- find aerial
+vim.keymap.set('n', '<leader>fR', builtin.registers, {})                                        -- find registers
+
 
 -- --------------------------------------------------------------------------------------------
 -- aerial
