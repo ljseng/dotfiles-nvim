@@ -1,7 +1,14 @@
 require('mason').setup()
 
 require('mason-lspconfig').setup {
-    automatic_installation = true
+    ensure_installed = {
+        "emmet_ls",
+        "hls@1.8.0",
+        "lua_ls",
+        "phpactor",
+        "tsserver",
+    },
+    automatic_installation = true,
 }
 
 -- lsp specific keymaps and settings
@@ -84,6 +91,12 @@ require('lspconfig').lua_ls.setup {
 }
 
 require('lspconfig').tsserver.setup {
+    root_dir = function() return vim.loop.cwd() end,
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
+require('lspconfig').hls.setup {
     root_dir = function() return vim.loop.cwd() end,
     on_attach = on_attach,
     capabilities = capabilities,

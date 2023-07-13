@@ -4,6 +4,7 @@ require("nvim-treesitter.configs").setup {
 		"bash",
 		"comment",
 		"css",
+        "haskell",
 		"html",
 		"javascript",
 		"jsdoc",
