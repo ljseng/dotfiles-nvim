@@ -23,6 +23,10 @@ return require('packer').startup(function(use)
         'stevearc/oil.nvim',
     }
 
+    use {
+        'christoomey/vim-tmux-navigator'
+    }
+
     -- nvim-tree - a better file explorer
     use {
         'nvim-tree/nvim-tree.lua',
