@@ -14,6 +14,8 @@ require("nvim-treesitter.configs").setup {
 		"markdown_inline",
 		"mermaid",
 		"php",
+        "rust",
+        "toml",
 		"sql",
 		"tsx",
 		"yaml",

@@ -7,6 +7,7 @@ require('mason-lspconfig').setup {
         "lua_ls",
         "phpactor",
         "tsserver",
+        "rust_analyzer",
     },
     automatic_installation = true,
 }
@@ -65,6 +66,7 @@ cmp.setup {
     },
     sources = {
         { name = 'nvim_lsp' },
+        { name = 'nvim_lsp_signature_help'},
         { name = 'luasnip' }
     }
 }

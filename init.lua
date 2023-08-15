@@ -24,5 +24,6 @@ if not vim.g.vscode then
     require('plugins/nvim-context-vt-cfg')
     require('plugins/oil-cfg')
     require('plugins/mini-cfg')
+    require('plugins/rust-tools-cfg')
 end
 
