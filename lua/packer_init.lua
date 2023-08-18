@@ -118,6 +118,9 @@ return require('packer').startup(function(use)
     -- mini
     use 'echasnovski/mini.nvim'
 
+    -- code formatter
+    use 'sbdchd/neoformat'
+
     -- toggleterm
     use 'akinsho/toggleterm.nvim'
 

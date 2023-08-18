@@ -25,5 +25,6 @@ if not vim.g.vscode then
     require('plugins/oil-cfg')
     require('plugins/mini-cfg')
     require('plugins/rust-tools-cfg')
+    require('plugins/neoformat-cfg')
 end
 
