@@ -1,6 +1,16 @@
+local function toggle_marks_signcolumn()
+    vim.cmd('MarksToggleSign')
+end
+
 require('toggleterm').setup {
     direction = 'float',
     open_mapping = [[<A-\>]],
+    on_open = function(term)
+        toggle_marks_signcolumn()
+    end,
+    on_close = function(term)
+        toggle_marks_signcolumn()
+    end,
 }
 
 local Terminal  = require('toggleterm.terminal').Terminal
