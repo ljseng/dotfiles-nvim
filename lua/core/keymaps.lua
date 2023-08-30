@@ -85,7 +85,7 @@ map('n', '<leader>]', ']}zzzv')                 -- jump into code block end and 
 -- --------------------------------------------------------------------------------------------
 -- toggle
 -- --------------------------------------------------------------------------------------------
-map('n', '<leader>vc', ':set cul! cuc!<CR>')            -- highlight cursor line and column
+map('n', '<leader>vc', ':set cuc!<CR>')                 -- toggle highlight cursor column
 map('n', '<leader>vC', ':NvimContextVtToggle<CR>')      -- toggle code context
 map('n', '<leader>vl', ':set list!<CR>')                -- show unprintable characters
 map('n', '<leader>vw', ':set wrap!<CR>')                -- toggle line wrap
