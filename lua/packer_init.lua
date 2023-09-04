@@ -137,11 +137,6 @@ return require('packer').startup(function(use)
             -- Required.
             "nvim-lua/plenary.nvim",
         },
-        config = function()
-            require("obsidian").setup({
-                dir = "/mnt/c/tmp_dir/obsidian_mywave",
-            })
-        end,
     })
 
     -- automatically set up configuration after cloning packer.nvim
