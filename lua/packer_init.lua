@@ -127,6 +127,19 @@ return require('packer').startup(function(use)
     -- dirdiff - to ease diff directory recursively
     use 'cossonleo/dirdiff.nvim'
 
+    use({
+        "epwalsh/obsidian.nvim",
+        requires = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+        },
+        config = function()
+            require("obsidian").setup({
+                dir = "/mnt/c/tmp_dir/obsidian_mywave",
+            })
+        end,
+    })
+
     -- automatically set up configuration after cloning packer.nvim
     -- put this at the end after all plugins
     if packer_bootstrap then
