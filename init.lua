@@ -26,5 +26,6 @@ if not vim.g.vscode then
     require('plugins/mini-cfg')
     require('plugins/rust-tools-cfg')
     require('plugins/neoformat-cfg')
+    require('plugins/leap-cfg')
 end
 
