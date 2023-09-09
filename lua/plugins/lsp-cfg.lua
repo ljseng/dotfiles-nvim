@@ -103,3 +103,9 @@ require('lspconfig').hls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
+
+require('lspconfig').clangd.setup {
+    root_dir = function() return vim.loop.cwd() end,
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
