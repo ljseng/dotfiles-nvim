@@ -127,10 +127,6 @@ return require('packer').startup(function(use)
     -- dirdiff - to ease diff directory recursively
     use 'cossonleo/dirdiff.nvim'
 
-    use {
-        'ggandor/leap.nvim',
-    }
-
     use({
         "epwalsh/obsidian.nvim",
         requires = {
