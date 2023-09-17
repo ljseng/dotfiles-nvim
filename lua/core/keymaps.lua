@@ -35,10 +35,12 @@ map('n', '<leader>Q', ':qa<CR>')                -- quit all
 map('n', '<leader>bB', ':ls!<CR>')                                      -- list all buffers
 map('n', '<leader>bb', ':buffer ', { noremap = true, silent = false })  -- shortcut to type :buffer. can type buffer number of buffer name following after. buffer name can be partial
 map('n', '<leader>bc', '<Cmd>BufferClose<CR>')                          -- close buffer
-map('n', '<leader>bp', '<Cmd>BufferPrevious<CR>')                       -- go to previous buffer
+map('n', '<leader>bC', '<Cmd>BufferClose!<CR>')                         -- close unwritten buffer
+map('n', '<leader>bN', '<Cmd>BufferPrevious<CR>')                       -- go to previous buffer
 map('n', '<leader>bn', '<Cmd>BufferNext<CR>')                           -- go to next buffer
 map('n', '<leader>b,', '<Cmd>BufferMovePrevious<CR>')                   -- move buffer previous
 map('n', '<leader>b.', '<Cmd>BufferMoveNext<CR>')                       -- move buffer next
+map('n', '<leader>bp', '<Cmd>BufferPin<CR>')                            -- pin or unpin a buffer
 
 -- go to N buffer
 map('n', '<leader>b1', '<Cmd>BufferGoto 1<CR>')
