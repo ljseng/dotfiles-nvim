@@ -135,7 +135,9 @@ vim.keymap.set('n', '<leader>fC', builtin.command_history, {})                  
 vim.keymap.set('n', '<leader>fm', builtin.marks, {})                                            -- find marks
 vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})                                         -- find jumplist
 vim.keymap.set('n', '<leader>fR', builtin.registers, {})                                        -- find registers
-
+vim.keymap.set('n', '<leader>fq', builtin.quickfix, { desc = 'Find items in quickfix list' })   -- find items in quickfix list
+vim.keymap.set('n', '<leader>fQ', builtin.quickfixhistory,
+    { desc = 'Find all quickfix lists in history and open them with builin.quickfix' })         -- find all quickfix lists in history and open them with builin.quickfix
 
 -- --------------------------------------------------------------------------------------------
 -- aerial
