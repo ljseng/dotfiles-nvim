@@ -125,6 +125,8 @@ vim.keymap.set('n', '<leader>ft', builtin.diagnostics, {})                      
 
 -- extensions
 vim.keymap.set('n', '<leader>fn', function() require('telescope').extensions.notify.notify() end, { desc = 'Find notification'})                                -- find notifications
+vim.keymap.set('n', '<leader>fd', function() require('telescope').extensions.diff.diff_current({ hidden = true }) end, { desc = 'Compare file with current'})   -- compare file with current
+vim.keymap.set('n', '<leader>fD', function() require('telescope').extensions.diff.diff_files({ hidden = true }) end, { desc = 'Compare 2 files'})               -- compare file with current
 
 -- misc
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})                                          -- find buffers

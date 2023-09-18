@@ -75,6 +75,14 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- diff files using telescope
+    use {
+        'jemag/telescope-diff.nvim',
+        requires = {
+            'nvim-telescope/telescope.nvim'
+        }
+    }
+
     -- indentation guideline
     use 'lukas-reineke/indent-blankline.nvim'
 

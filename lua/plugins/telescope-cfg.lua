@@ -21,6 +21,7 @@ telescope.setup {
 }
 
 telescope.load_extension('notify')
+telescope.load_extension('diff')
 
 -- to workaround files open using telescope will not have fold calculated (probably due to treesitter not yet ready?)
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
