@@ -129,6 +129,7 @@ vim.keymap.set('n', '<leader>fn', '<Cmd>Telescope notify<CR>', {})              
 -- misc
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})                                          -- find buffers
 vim.keymap.set('n', '<leader>fc', builtin.commands, {})                                         -- find commands
+vim.keymap.set('n', '<leader>fC', builtin.command_history, {})                                  -- find recently run commands
 vim.keymap.set('n', '<leader>fm', builtin.marks, {})                                            -- find marks
 vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})                                         -- find jumplist
 vim.keymap.set('n', '<leader>fR', builtin.registers, {})                                        -- find registers
