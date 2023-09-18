@@ -1,3 +1,5 @@
+-- TODO: discard map function. follow telescope keymap setup style
+-- TODO: add description for all keymaps so that is easier to find keymaps using telescope
 local v = vim
 
 -- --------------------------------------------------------------------------------------------
