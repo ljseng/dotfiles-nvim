@@ -161,6 +161,8 @@ v.keymap.set('n', '<leader>fR', builtin.registers
     , { desc = 'Telescope find registers' })
 v.keymap.set('n', '<leader>fk', builtin.keymaps
     , { desc = 'Telescope find keymaps' })
+v.keymap.set('n', '<leader>fl', builtin.loclist
+    , { desc = 'Telescope find items in location list' })
 v.keymap.set('n', '<leader>fq', builtin.quickfix
     , { desc = 'Telescope find items in quickfix list' })
 v.keymap.set('n', '<leader>fQ', builtin.quickfixhistory
