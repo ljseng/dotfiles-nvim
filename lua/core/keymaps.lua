@@ -124,7 +124,7 @@ vim.keymap.set('n', '<leader>fr', builtin.lsp_references, {})                   
 vim.keymap.set('n', '<leader>ft', builtin.diagnostics, {})                                      -- find diagnostics
 
 -- extensions
-vim.keymap.set('n', '<leader>fn', '<Cmd>Telescope notify<CR>', {})                              -- find notifications
+vim.keymap.set('n', '<leader>fn', function() require('telescope').extensions.notify.notify() end, { desc = 'Find notification'})                                -- find notifications
 
 -- misc
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})                                          -- find buffers
