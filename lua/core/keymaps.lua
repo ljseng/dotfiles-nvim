@@ -1,3 +1,5 @@
+local v = vim
+
 -- --------------------------------------------------------------------------------------------
 -- function to help keymapping
 -- default options: non-recursive map + silent
@@ -7,15 +9,15 @@ local function map(mode, lhs, rhs, opts)
 
     -- overwrite default options
     if opts then
-        options = vim.tbl_extend('force', options, opts)
+        options = v.tbl_extend('force', options, opts)
     end
 
     -- set keymap
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    v.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- space is leader key
-vim.g.mapleader = ' '
+v.g.mapleader = ' '
 
 -- --------------------------------------------------------------------------------------------
 -- all mappings
@@ -109,40 +111,63 @@ map('n', '<leader>eo', ':Oil --float<CR>')                -- open oil floating w
 local builtin = require('telescope.builtin')
 
 -- find files
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})                                       -- fuzzy find files
-vim.keymap.set('n', '<leader>fF', '<Cmd>Telescope find_files hidden=true<CR>', {})              -- fuzzy find files including hidden files
+v.keymap.set('n', '<leader>ff', builtin.find_files
+    , { desc = 'Telescope find files exclude hidden' })
+v.keymap.set('n', '<leader>fF', function() builtin.find_files({ hidden = true }) end
+    , { desc = 'Telescope find files include hidden' })
 
 -- grep for word
-vim.keymap.set('n', '<leader>fG', '<Cmd>Telescope grep_string search_dirs=%:p<CR>', {})         -- grep word under cursor in current buffer. external dependency: ripgrep
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})                                        -- grep within directory. external dependency: ripgrep
+v.keymap.set('n', '<leader>fg', builtin.live_grep
+    , { desc = 'Telescope grep in the current working directory' })
+v.keymap.set('n', '<leader>fG', function() builtin.grep_string({ search_dirs={ v.fn.expand('%:p') }}) end
+    , { desc = 'Telescope grep the word under cursor in the current working directory' })
 
 -- lsp related
-vim.keymap.set('n', '<leader>fA', builtin.lsp_workspace_symbols, {})                            -- find workspace symbols
-vim.keymap.set('n', '<leader>fa', builtin.lsp_document_symbols, {})                             -- find document symbols
-vim.keymap.set('n', '<leader>fi', builtin.lsp_implementations, {})                              -- find implementation of the word under cursor
-vim.keymap.set('n', '<leader>fr', builtin.lsp_references, {})                                   -- find references for word under cursor
-vim.keymap.set('n', '<leader>ft', builtin.diagnostics, {})                                      -- find diagnostics
+v.keymap.set('n', '<leader>fA', builtin.lsp_workspace_symbols
+    , { desc = 'Telescope find LSP workspace symbols in the current working directory' })
+v.keymap.set('n', '<leader>fa', builtin.lsp_document_symbols
+    , { desc = 'Telescope find LSP document symbols in the current buffer' })
+v.keymap.set('n', '<leader>fi', builtin.lsp_implementations
+    , { desc = 'Telescope find LSP implementations for the word under cursor' })
+v.keymap.set('n', '<leader>fr', builtin.lsp_references
+    , { desc = 'Telescope find LSP references for word under cursor' })
+v.keymap.set('n', '<leader>ft', builtin.diagnostics
+    , { desc = 'Telescope find LSP diagnostics for all open buffers' })
+v.keymap.set('n', '<leader>fT', function() builtin.diagnostics({ bufnr = 0 }) end
+    , { desc = 'Telescope find LSP diagnostics for current buffer' })
 
 -- extensions
-vim.keymap.set('n', '<leader>fn', function() require('telescope').extensions.notify.notify() end, { desc = 'Find notification'})                                -- find notifications
-vim.keymap.set('n', '<leader>fd', function() require('telescope').extensions.diff.diff_current({ hidden = true }) end, { desc = 'Compare file with current'})   -- compare file with current
-vim.keymap.set('n', '<leader>fD', function() require('telescope').extensions.diff.diff_files({ hidden = true }) end, { desc = 'Compare 2 files'})               -- compare file with current
+v.keymap.set('n', '<leader>fn', function() require('telescope').extensions.notify.notify() end
+    , { desc = 'Telescope find notification'})
+v.keymap.set('n', '<leader>fd', function() require('telescope').extensions.diff.diff_current({ hidden = true }) end
+    , { desc = 'Telescope compare file with current'})
+v.keymap.set('n', '<leader>fD', function() require('telescope').extensions.diff.diff_files({ hidden = true }) end
+    , { desc = 'Telescope compare 2 files'})
 
 -- misc
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})                                          -- find buffers
-vim.keymap.set('n', '<leader>fc', builtin.commands, {})                                         -- find commands
-vim.keymap.set('n', '<leader>fC', builtin.command_history, {})                                  -- find recently run commands
-vim.keymap.set('n', '<leader>fm', builtin.marks, {})                                            -- find marks
-vim.keymap.set('n', '<leader>fj', builtin.jumplist, {})                                         -- find jumplist
-vim.keymap.set('n', '<leader>fR', builtin.registers, {})                                        -- find registers
-vim.keymap.set('n', '<leader>fq', builtin.quickfix, { desc = 'Find items in quickfix list' })   -- find items in quickfix list
-vim.keymap.set('n', '<leader>fQ', builtin.quickfixhistory,
-    { desc = 'Find all quickfix lists in history and open them with builin.quickfix' })         -- find all quickfix lists in history and open them with builin.quickfix
+v.keymap.set('n', '<leader>fb', builtin.buffers
+    , { desc = 'Telescope find buffers' })
+v.keymap.set('n', '<leader>fc', builtin.commands
+    , { desc = 'Telescope find commands' })
+v.keymap.set('n', '<leader>fC', builtin.command_history
+    , { desc = 'Telescope find recent command histories' })
+v.keymap.set('n', '<leader>fm', builtin.marks
+    , { desc = 'Telescope find marks' })
+v.keymap.set('n', '<leader>fj', builtin.jumplist
+    , { desc = 'Telescope find jump list' })
+v.keymap.set('n', '<leader>fR', builtin.registers
+    , { desc = 'Telescope find registers' })
+v.keymap.set('n', '<leader>fk', builtin.keymaps
+    , { desc = 'Telescope find keymaps' })
+v.keymap.set('n', '<leader>fq', builtin.quickfix
+    , { desc = 'Telescope find items in quickfix list' })
+v.keymap.set('n', '<leader>fQ', builtin.quickfixhistory
+    , { desc = 'Telescope find all quickfix lists in history and open them with builin.quickfix' })
 
 -- --------------------------------------------------------------------------------------------
 -- aerial
 -- --------------------------------------------------------------------------------------------
-vim.keymap.set('n', '<leader>/', '<cmd>AerialToggle!<CR>')      -- aerial code outline window at the right
+v.keymap.set('n', '<leader>/', '<cmd>AerialToggle!<CR>')      -- aerial code outline window at the right
 
 -- --------------------------------------------------------------------------------------------
 -- misc
