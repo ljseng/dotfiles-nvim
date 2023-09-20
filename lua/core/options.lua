@@ -33,6 +33,7 @@ o.splitbelow     = true                            -- horizontal split to bottom
 o.laststatus     = 2                               -- always show status line
 o.ruler          = true                            -- show ruler at status line
 o.linebreak      = true                            -- wrap on word boundary
+o.wrap           = false                           -- do not wrap line by default
 o.foldmethod     = 'expr'                          -- code folding
 o.foldexpr       = 'nvim_treesitter#foldexpr()'    -- code folding using treesitter
 o.foldcolumn     = 'auto'                          -- code fold column show when there is fold
