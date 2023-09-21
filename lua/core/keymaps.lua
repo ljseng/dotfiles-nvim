@@ -138,6 +138,18 @@ v.keymap.set('n', '<leader>ft', builtin.diagnostics
 v.keymap.set('n', '<leader>fT', function() builtin.diagnostics({ bufnr = 0 }) end
     , { desc = 'Telescope find LSP diagnostics for current buffer' })
 
+-- git related
+v.keymap.set('n', '<leader>ll', builtin.git_commits
+    , { desc = 'Telescope find git commits with diff preview, checkout action <Cr>' })
+v.keymap.set('n', '<leader>lL', builtin.git_bcommits
+    , { desc = 'Telescope find git commits with diff preview for current buffer and check them out on <Cr>' })
+v.keymap.set('n', '<leader>lb', builtin.git_branches
+    , { desc = 'Telescope find git branches with log preview, checkout action <Cr>, switch action <C-s>, create action <C-a>, delete action <C-d>, merge action <C-y>' })
+v.keymap.set('n', '<leader>lt', builtin.git_status
+    , { desc = 'Telescope find git status with diff preview and add action' })
+v.keymap.set('n', '<leader>ls', builtin.git_stash
+    , { desc = 'Telescope find git stash items in current repository with ability to apply them on <Cr>' })
+
 -- extensions
 v.keymap.set('n', '<leader>fn', function() require('telescope').extensions.notify.notify() end
     , { desc = 'Telescope find notification'})
