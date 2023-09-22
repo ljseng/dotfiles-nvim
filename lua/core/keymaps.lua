@@ -87,6 +87,8 @@ map('n', '<leader>o', '<C-o>zzzv')              -- jump out of jump list and cen
 map('n', '<leader>i', '<C-i>zzzv')              -- jump into jump list and center the cursor
 map('n', '<leader>[', '[{zzzv')                 -- jump into code block begin and center the cursor
 map('n', '<leader>]', ']}zzzv')                 -- jump into code block end and center the cursor
+map('n', 'n', 'nzzzv')                          -- jump to next search and center the cursor
+map('n', 'N', 'Nzzzv')                          -- jump to previous search and center the cursor
 
 -- --------------------------------------------------------------------------------------------
 -- toggle
