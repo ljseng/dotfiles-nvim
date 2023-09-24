@@ -121,9 +121,9 @@ v.keymap.set('n', '<leader>fF', function() builtin.find_files({ hidden = true })
     , { desc = 'Telescope find files include hidden' })
 
 -- grep for word
-v.keymap.set('n', '<leader>fg', builtin.live_grep
+v.keymap.set('n', '<leader>fg', function() require('telescope').extensions.live_grep_args.live_grep_args() end
     , { desc = 'Telescope grep in the current working directory' })
-v.keymap.set('n', '<leader>fG', function() builtin.grep_string({ search_dirs={ v.fn.expand('%:p') }}) end
+v.keymap.set('n', '<leader>fG', function() require("telescope-live-grep-args.shortcuts").grep_word_under_cursor() end
     , { desc = 'Telescope grep the word under cursor in the current working directory' })
 
 -- lsp related

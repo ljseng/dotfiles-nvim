@@ -71,7 +71,8 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim',
         requires = {
-            'nvim-lua/plenary.nvim'
+            'nvim-lua/plenary.nvim',
+            'nvim-telescope/telescope-live-grep-args.nvim',
         }
     }
 
