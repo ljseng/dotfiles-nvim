@@ -20,7 +20,6 @@ if not vim.g.vscode then
     require('plugins/luasnip-cfg')
     require('plugins/marks-cfg')
     require('plugins/nvim-notify-cfg')
-    require('plugins/trouble-cfg')
     require('plugins/nvim-context-vt-cfg')
     require('plugins/oil-cfg')
     require('plugins/mini-cfg')

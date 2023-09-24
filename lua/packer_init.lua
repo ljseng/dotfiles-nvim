@@ -89,9 +89,6 @@ return require('packer').startup(function(use)
     -- aerial - for code outline
     use 'stevearc/aerial.nvim'
 
-    -- trouble - see all code troubles at one place
-    use 'folke/trouble.nvim'
-
     -- nvim_context_vt
     use 'haringsrob/nvim_context_vt'
 

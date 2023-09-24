@@ -21,4 +21,3 @@
 | `akinsho/toggleterm.nvim`                                                               | For better terminal experience           | `lazygit`  |
 | `lewis6991/gitsigns.nvim`                                                               | Preview and manage git changes in buffer | NA         |
 | `rafamadriz/friendly-snippets`                                                          | Snippet to write code faster             | NA         |
-| `folke/trouble.nvim`                                                                    | See all LSP items in one place           | NA         |
