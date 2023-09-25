@@ -76,14 +76,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- diff files using telescope
-    use {
-        'jemag/telescope-diff.nvim',
-        requires = {
-            'nvim-telescope/telescope.nvim'
-        }
-    }
-
     -- indentation guideline
     use 'lukas-reineke/indent-blankline.nvim'
 
@@ -132,6 +124,15 @@ return require('packer').startup(function(use)
 
     -- dirdiff - to ease diff directory recursively
     use 'cossonleo/dirdiff.nvim'
+    --
+
+    -- diff files using telescope
+    use {
+        'jemag/telescope-diff.nvim',
+        requires = {
+            'nvim-telescope/telescope.nvim'
+        }
+    }
 
     use({
         "epwalsh/obsidian.nvim",
