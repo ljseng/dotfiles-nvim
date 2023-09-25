@@ -122,10 +122,6 @@ return require('packer').startup(function(use)
     -- toggleterm
     use 'akinsho/toggleterm.nvim'
 
-    -- dirdiff - to ease diff directory recursively
-    use 'cossonleo/dirdiff.nvim'
-    --
-
     -- diff files using telescope
     use {
         'jemag/telescope-diff.nvim',
