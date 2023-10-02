@@ -80,6 +80,10 @@ map('n', '<leader>ex', '<C-w>x')                -- swap adjacent buffers
 map('n', '<leader>er', '<C-w>r')                -- rotate buffer clockwise
 map('n', '<leader>eR', '<C-w>R')                -- rotate buffer anti-clockwise
 
+-- quickfix
+map('n', ']q', '<Cmd>cnext<CR>')                -- go to next quickfix list item
+map('n', '[q', '<Cmd>cprevious<CR>')            -- go to previous quickfix list item
+
 -- --------------------------------------------------------------------------------------------
 -- cursor movement
 -- --------------------------------------------------------------------------------------------
