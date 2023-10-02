@@ -20,11 +20,11 @@ local on_attach = function(client, bufnr)
 
     local bufopts = { noremap=true, silent=true, buffer=bufnr }
 
-    vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, bufopts)
-    vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, bufopts)
-    vim.keymap.set('n', '<leader>gk', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', '<leader>gn', vim.lsp.buf.rename, bufopts)
-    vim.keymap.set('n', '<leader>gc', vim.lsp.buf.code_action, bufopts)
+    vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, bufopts)
+    vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, bufopts)
+    vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover, bufopts)
+    vim.keymap.set('n', '<leader>ln', vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, bufopts)
 
 end
 
