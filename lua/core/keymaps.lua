@@ -194,6 +194,12 @@ v.keymap.set('n', '<leader>fq', builtin.quickfix
 v.keymap.set('n', '<leader>fQ', builtin.quickfixhistory
     , { desc = 'Telescope find all quickfix lists in history and open them with builin.quickfix' })
 
+-- from pounce plugin
+v.keymap.set('n', '<leader>fw', function() require('pounce').pounce({ }) end
+    , {desc = 'Pounce for word' })
+v.keymap.set('n', '<leader>fW', function() require('pounce').pounce({ do_repeat = true }) end
+    , {desc = 'Pounce for word' })
+
 -- --------------------------------------------------------------------------------------------
 -- aerial
 -- --------------------------------------------------------------------------------------------

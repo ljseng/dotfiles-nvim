@@ -133,6 +133,9 @@ return require('packer').startup(function(use)
     -- handy git wrapper
     use 'tpope/vim-fugitive'
 
+    -- better searching for word
+    use 'rlane/pounce.nvim'
+
     use({
         "epwalsh/obsidian.nvim",
         requires = {
