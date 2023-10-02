@@ -130,6 +130,7 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- handy git wrapper
     use 'tpope/vim-fugitive'
 
     use({
