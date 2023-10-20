@@ -136,6 +136,13 @@ return require('packer').startup(function(use)
     -- better searching for word
     use 'rlane/pounce.nvim'
 
+    use {
+        "Gelio/cmp-natdat",
+        config = function()
+            require("cmp_natdat").setup()
+        end
+    }
+
     use({
         "epwalsh/obsidian.nvim",
         requires = {

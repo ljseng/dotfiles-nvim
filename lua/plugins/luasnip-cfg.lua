@@ -22,32 +22,6 @@ local dynamicn = ls.dynamic_node
 
 ls.add_snippets(nil, {
     all = {
-        -- today's date
-        snip({
-            trig = '@today',
-            name = 'Today date',
-            dscr = 'Today date in the form of YYYY-MM-DD',
-        }, {
-            func(
-                function()
-                    return {os.date('%Y-%m-%d')}
-                end
-                , {}
-            ),
-        }),
-        -- today's datetime
-        snip({
-            trig = '@now',
-            name = 'Today datetime',
-            dscr = 'Today datetime in the form of YYYY-MM-DDTH.M.S',
-        }, {
-            func(
-                function()
-                    return {os.date('%Y-%m-%dT%H.%M.%S')}
-                end
-                , {}
-            ),
-        }),
         -- uuid short
         snip({
             trig = '@uuid:short',
