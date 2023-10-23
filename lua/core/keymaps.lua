@@ -86,6 +86,8 @@ map('n', 'G', 'G0')                             -- go to bottom and first column
 -- quickfix
 map('n', ']q', '<Cmd>cnext<CR>')                -- go to next quickfix list item
 map('n', '[q', '<Cmd>cprevious<CR>')            -- go to previous quickfix list item
+map('n', ']Q', '<Cmd>clast<CR>')                -- go to last quickfix list item
+map('n', '[Q', '<Cmd>cfirst<CR>')               -- go to first quickfix list item
 
 -- --------------------------------------------------------------------------------------------
 -- cursor movement
