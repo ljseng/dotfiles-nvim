@@ -84,10 +84,13 @@ map('n', 'gg', 'gg0')                           -- go to top and first column
 map('n', 'G', 'G0')                             -- go to bottom and first column
 
 -- quickfix
-map('n', ']q', '<Cmd>cnext<CR>')                -- go to next quickfix list item
-map('n', '[q', '<Cmd>cprevious<CR>')            -- go to previous quickfix list item
-map('n', ']Q', '<Cmd>clast<CR>')                -- go to last quickfix list item
-map('n', '[Q', '<Cmd>cfirst<CR>')               -- go to first quickfix list item
+map('n', '<leader>qq', '<Cmd>copen<CR>')                                      -- open quickfix
+map('n', '<leader>qQ', '<Cmd>cclose<CR>')                                     -- close quickfix
+map('n', '<leader>qf', ':Cfilter ', { noremap = true, silent = false })       -- further filter quickfix
+map('n', ']q', '<Cmd>cnext<CR>zzzv')                                          -- go to next quickfix list item
+map('n', '[q', '<Cmd>cprevious<CR>zzzv')                                      -- go to previous quickfix list item
+map('n', ']Q', '<Cmd>clast<CR>zzzv')                                          -- go to last quickfix list item
+map('n', '[Q', '<Cmd>cfirst<CR>zzzv')                                         -- go to first quickfix list item
 
 -- --------------------------------------------------------------------------------------------
 -- cursor movement
@@ -130,9 +133,9 @@ v.keymap.set('n', '<leader>fF', function() builtin.find_files({ hidden = true })
     , { desc = 'Telescope find files include hidden' })
 
 -- grep for word
-v.keymap.set('n', '<leader>fg', function() require('telescope').extensions.live_grep_args.live_grep_args() end
+v.keymap.set('n', '<leader>fg', builtin.live_grep
     , { desc = 'Telescope grep in the current working directory' })
-v.keymap.set('n', '<leader>fG', function() require("telescope-live-grep-args.shortcuts").grep_word_under_cursor() end
+v.keymap.set('n', '<leader>fG', builtin.grep_string
     , { desc = 'Telescope grep the word under cursor in the current working directory' })
 
 -- lsp related
