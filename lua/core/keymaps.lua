@@ -30,8 +30,8 @@ map('n', 'Y', 'y$')                             -- yank from current position to
 -- manage file
 -- --------------------------------------------------------------------------------------------
 map('n', '<leader>w', ':w<CR>')                 -- save file
-map('n', '<leader>q', ':q<CR>')                 -- quit file
-map('n', '<leader>Q', ':qa<CR>')                -- quit all
+map('n', '<leader>x', ':q<CR>')                 -- quit file
+map('n', '<leader>X', ':qa<CR>')                -- quit all
 
 -- --------------------------------------------------------------------------------------------
 -- buffers management (with barbar)
