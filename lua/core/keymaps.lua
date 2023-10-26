@@ -63,10 +63,10 @@ map('n', '<leader>es', '<C-w>v')                -- split buffer vertically
 map('n', '<leader>eS', '<C-w>s')                -- split buffer horizontally
 
 -- resize buffers
-map('n', '<C-Right>', '<C-w>10>')               -- increase width by 10 columns
-map('n', '<C-Left>', '<C-w>10<')                -- decrease width by 10 columns
-map('n', '<C-Up>', '<C-w>10+')                  -- increase height by 10 rows
-map('n', '<C-Down>', '<C-w>10-')                -- decrease height by 10 rows
+map('n', '<C-Right>', '<C-w>5>')               -- increase width by 5 columns
+map('n', '<C-Left>', '<C-w>5<')                -- decrease width by 5 columns
+map('n', '<C-Up>', '<C-w>5+')                  -- increase height by 5 rows
+map('n', '<C-Down>', '<C-w>5-')                -- decrease height by 5 rows
 map('n', '<leader>e=', '<C-w>=')                -- make all window equal size
 
 -- moving around buffers
