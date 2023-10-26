@@ -71,6 +71,7 @@ vim.cmd[[
   augroup QuickfixSettings
     autocmd!
     autocmd FileType qf setlocal nobuflisted
+    autocmd FileType qf setlocal norelativenumber
   augroup END
 ]]
 

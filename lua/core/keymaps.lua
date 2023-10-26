@@ -86,6 +86,7 @@ map('n', 'G', 'G0')                             -- go to bottom and first column
 -- quickfix
 map('n', '<leader>qq', '<Cmd>copen<CR>')                                      -- open quickfix
 map('n', '<leader>qQ', '<Cmd>cclose<CR>')                                     -- close quickfix
+map('n', '<leader>ql', ':cc ', { noremap = true, silent = false })            -- jump to quickfix item
 map('n', '<leader>qg', ':grep -riP ', { noremap = true, silent = false })     -- external grep recursively, case-insensitively, and use perl compatible regular expression (PCRE)
 map('n', '<leader>qf', ':Cfilter ', { noremap = true, silent = false })       -- further filter quickfix
 map('n', ']q', '<Cmd>cnext<CR>zzzv')                                          -- go to next quickfix list item
