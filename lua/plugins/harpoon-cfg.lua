@@ -20,7 +20,7 @@ v.keymap.set('n', '<leader>fh', function() require('telescope').extensions.harpo
     , { noremap=true, silent=true, desc='Telescope find harpoon marks'})
 
 -- keymaps for harpoon
-v.keymap.set('n', '<leader>hm', harp_add_file
+v.keymap.set('n', '<leader>hh', harp_add_file
 	, { noremap=true, silent=true, desc='Harpoon mark a file' })
 v.keymap.set('n', '<leader>hi', function () harp_ui.toggle_quick_menu() end
 	, { noremap=true, silent=true, desc='Harpoon toggle mark menu' })
