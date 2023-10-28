@@ -9,7 +9,7 @@ local harp_ui = require("harpoon.ui")
 local harp_add_file = function()
     harp_menu.add_file()
     local bufname = v.fn.bufname(v.fn.bufnr('%'))
-    local msg = "Harpooned file '" .. bufname .. "'"
+    local msg = "Harpooned '" .. bufname .. "'"
     v.notify(msg, 'info', {
         title = 'Harpoon',
     })
