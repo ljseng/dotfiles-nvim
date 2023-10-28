@@ -62,8 +62,6 @@ o.smartindent = true
 
 vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=200}') -- highlight yanked text briefly
 
-vim.notify = require('notify')      -- notification with notify plugin
-
 -- quickfix related
 vim.cmd('packadd cfilter')  -- to use `:Cfilter /{pat}/` to further filter quickfix
 -- do not show quickfix buffer in the buffer list. `:bnext`, `:bprevious` will not land on quickfix buffer
