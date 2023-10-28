@@ -75,6 +75,10 @@ return require('packer').startup(function(use)
         }
     }
 
+    use {
+        'ThePrimeagen/harpoon',
+    }
+
     -- indentation guideline
     use 'lukas-reineke/indent-blankline.nvim'
 
