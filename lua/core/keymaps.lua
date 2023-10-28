@@ -18,13 +18,36 @@ local function map(mode, lhs, rhs, opts)
     v.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- --------------------------------------------------------------------------------------------
+-- various helper functions
+-- --------------------------------------------------------------------------------------------
+local copy_bufname_into_unnamed_reg = function()
+    local bufname = v.fn.bufname('%')
+    if bufname then
+        bufname = v.fn.fnamemodify(bufname, ':t')
+        v.fn.setreg('"', bufname);
+        local msg = "Copied buffer name '" .. bufname .. "' into unnamed register"
+        v.notify(msg, 'info', {
+            title = 'Yank',
+        })
+    else
+        bufname = nil
+        v.notify('Failed to get buffer name', 'warn', {
+            title = 'Yank',
+        })
+    end
+end
+
 -- space is leader key
 v.g.mapleader = ' '
 
 -- --------------------------------------------------------------------------------------------
 -- all mappings
 -- --------------------------------------------------------------------------------------------
-map('n', 'Y', 'y$')                             -- yank from current position to end of line
+v.keymap.set('n', 'Y', 'y$'
+    , { noremap=true, silent=true, desc='Yank from current position to end of line' })
+v.keymap.set('n', 'yn', copy_bufname_into_unnamed_reg
+    , { noremap=true, silent=true, desc='Yank current buffer name into unnamed register' })
 
 -- --------------------------------------------------------------------------------------------
 -- manage file
