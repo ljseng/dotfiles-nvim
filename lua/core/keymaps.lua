@@ -208,7 +208,7 @@ v.keymap.set('n', '<leader>fQ', builtin.quickfixhistory
 v.keymap.set('n', '<leader>fw', function() require('pounce').pounce({ }) end
     , {desc = 'Pounce for word' })
 v.keymap.set('n', '<leader>fW', function() require('pounce').pounce({ do_repeat = true }) end
-    , {desc = 'Pounce for word' })
+    , {desc = 'Repeat the last pounced word' })
 
 -- --------------------------------------------------------------------------------------------
 -- aerial
