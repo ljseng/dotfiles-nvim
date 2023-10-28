@@ -26,5 +26,6 @@ if not vim.g.vscode then
     require('plugins/rust-tools-cfg')
     require('plugins/neoformat-cfg')
     require('plugins/obsidian-cfg')
+    require('plugins/harpoon-cfg')
 end
 
