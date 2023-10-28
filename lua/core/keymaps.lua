@@ -34,33 +34,26 @@ map('n', '<leader>x', ':q<CR>')                 -- quit file
 map('n', '<leader>X', ':qa<CR>')                -- quit all
 
 -- --------------------------------------------------------------------------------------------
--- buffers management (with barbar)
+-- buffers management
 -- --------------------------------------------------------------------------------------------
-map('n', '<leader>bB', ':ls!<CR>')                                      -- list all buffers
-map('n', '<leader>bb', ':buffer ', { noremap = true, silent = false })  -- shortcut to type :buffer. can type buffer number of buffer name following after. buffer name can be partial
-map('n', '<leader>bc', '<Cmd>BufferClose<CR>')                          -- close buffer
-map('n', '<leader>bC', '<Cmd>BufferCloseAllButCurrentOrPinned<CR>')     -- close all but current or pinned
-map('n', '<leader>bN', '<Cmd>BufferPrevious<CR>')                       -- go to previous buffer
-map('n', '<leader>bn', '<Cmd>BufferNext<CR>')                           -- go to next buffer
-map('n', '<leader>b,', '<Cmd>BufferMovePrevious<CR>')                   -- move buffer previous
-map('n', '<leader>b.', '<Cmd>BufferMoveNext<CR>')                       -- move buffer next
-map('n', '<leader>bp', '<Cmd>BufferPin<CR>')                            -- pin or unpin a buffer
-
--- go to N buffer
-map('n', '<leader>b1', '<Cmd>BufferGoto 1<CR>')
-map('n', '<leader>b2', '<Cmd>BufferGoto 2<CR>')
-map('n', '<leader>b3', '<Cmd>BufferGoto 3<CR>')
-map('n', '<leader>b4', '<Cmd>BufferGoto 4<CR>')
-map('n', '<leader>b5', '<Cmd>BufferGoto 5<CR>')
-map('n', '<leader>b6', '<Cmd>BufferGoto 6<CR>')
-map('n', '<leader>b7', '<Cmd>BufferGoto 7<CR>')
-map('n', '<leader>b8', '<Cmd>BufferGoto 8<CR>')
-map('n', '<leader>b9', '<Cmd>BufferGoto 9<CR>')
-map('n', '<leader>b0', '<Cmd>BufferLast<CR>')
+v.keymap.set('n', '<leader>bl', ':ls<CR>'
+    , { noremap=true, silent=true, desc='Open buffer list' })
+v.keymap.set('n', '<leader>bL', ':ls!<CR>'
+    , { noremap=true, silent=true, desc='Open buffer list including unlisted' })
+v.keymap.set('n', '<leader>bb', ':b '
+    , { noremap=true, silent=false, desc='Open buffer [N] from buffer list. [N] could be buffer number or buffer name (can tab completion)' })
+v.keymap.set('n', '<leader>bd', ':bd '
+    , { noremap=true, silent=false, desc='Delete buffer [N] from buffer list. [N] could be buffer number or buffer name (can tab completion)' })
 
 -- split buffers
-map('n', '<leader>es', '<C-w>v')                -- split buffer vertically
-map('n', '<leader>eS', '<C-w>s')                -- split buffer horizontally
+v.keymap.set('n', '<leader>bs', ':vert sb '
+    , { noremap=true, silent=false, desc='Vertically split buffer [N] from the buffer list. [N] could be buffer number or buffer name (can tab completion)' })
+v.keymap.set('n', '<leader>es', '<C-w>v'
+    , { noremap=true, silent=true, desc='Split current buffer vertically' })
+v.keymap.set('n', '<leader>eS', '<C-w>s'
+    , { noremap=true, silent=true, desc='Split current buffer horizontally' })
+v.keymap.set('n', '<leader>et', '<C-w>v<C-w>T'
+    , { noremap=true, silent=true, desc='Open current buffer at new tab' })
 
 -- resize buffers
 map('n', '<C-Right>', '<C-w>5>')               -- increase width by 5 columns

@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 
     -- barbar - a better way to manage buffers
-    use 'romgrk/barbar.nvim'
+    -- use 'romgrk/barbar.nvim'
 
     -- treesitter - a better syntax highlighting
     use {
