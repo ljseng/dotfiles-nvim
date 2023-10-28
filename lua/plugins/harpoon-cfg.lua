@@ -1,6 +1,10 @@
 local v = vim
 
-require("harpoon").setup()
+require("harpoon").setup({
+    menu = {
+        width = math.floor(v.api.nvim_win_get_width(0) * 0.8),
+    },
+})
 
 local harp_menu = require("harpoon.mark")
 local harp_ui = require("harpoon.ui")
