@@ -99,6 +99,11 @@ map('n', '<leader>eR', '<C-w>R')                -- rotate buffer anti-clockwise
 map('n', 'gg', 'gg0')                           -- go to top and first column
 map('n', 'G', 'G0')                             -- go to bottom and first column
 
+-- misc
+-- TODO: add notification on change success
+v.keymap.set('n', '<leader>ez', '<Cmd>cd %:p:h<CR>'
+    , { noremap=true, silent=true, desc='Change vim directory to current file' })
+
 -- quickfix
 map('n', '<leader>qq', '<Cmd>copen<CR>')                                      -- open quickfix
 map('n', '<leader>qQ', '<Cmd>cclose<CR>')                                     -- close quickfix
