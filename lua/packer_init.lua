@@ -63,6 +63,8 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
+    use 'f3fora/cmp-spell'
+    use 'hrsh7th/cmp-calc'
 
     -- gitsigns
     use 'lewis6991/gitsigns.nvim'

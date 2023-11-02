@@ -43,6 +43,8 @@ o.listchars      = 'eol:↴,space:⋅'                 -- to better identify whi
 o.signcolumn     = 'auto:4'                        -- auto resize sign column up to given number. for: gitsigns, marks
 o.cursorline     = true                            -- highlight cursorline
 
+o.spelllang = {'en_gb','en_us'}                    -- use Great Britain spelling language
+
 -- colorscheme with plugin
 o.termguicolors = true
 vim.cmd('colorscheme everforest')
