@@ -194,10 +194,10 @@ v.keymap.set('n', '<leader>gs', builtin.git_stash
 -- git related (fugitive)
 v.keymap.set('n', '<leader>gc', '<cmd>Git commit<CR>'
     , { desc = 'Git commit' })
-v.keymap.set('n', '<leader>gp', '<cmd>Git push<CR>'
-    , { desc = 'Git push' })
-v.keymap.set('n', '<leader>gP', '<cmd>Git pull<CR>'
+v.keymap.set('n', '<leader>gp', '<cmd>Git pull<CR>'
     , { desc = 'Git pull' })
+v.keymap.set('n', '<leader>gP', '<cmd>Git push<CR>'
+    , { desc = 'Git push' })
 
 -- extensions
 v.keymap.set('n', '<leader>fn', function() require('telescope').extensions.notify.notify() end
