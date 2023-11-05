@@ -2,6 +2,17 @@ local get_str_first_char = function(str)
     return str:sub(1,1)
 end
 
+local prepend_git_icon = function (branch_name)
+    return ' ' .. branch_name
+end
+
+local map_fileformat_icon = function (fileformat)
+    if fileformat == 'unix' then return '' end
+    if fileformat == 'dos' then return '' end
+    if fileformat == 'mac' then return '' end
+    return fileformat
+end
+
 require('lualine').setup {
     options = {
         icons_enabled = false,
@@ -10,9 +21,11 @@ require('lualine').setup {
         },
     },
     tabline = {
-        lualine_a = { { 'filename', }, },
-        lualine_b = { { 'aerial', }, },
-        lualine_c = { { 'diagnostics' } },
+        lualine_a = {
+            { 'buffers', mode = 4 },
+        },
+        lualine_b = { },
+        lualine_c = { },
         lualine_x = { },
         lualine_y = { },
         lualine_z = { { 'tabs', }, },
@@ -20,14 +33,15 @@ require('lualine').setup {
     sections = {
         lualine_a = {
             { 'mode', fmt = get_str_first_char, },
-            { 'branch' },
         },
-        lualine_b = {
-            { 'buffers', mode = 4 },
-        },
-        lualine_c = { },
+        lualine_b = { { 'aerial', }, },
+        lualine_c = { { 'diagnostics' } },
         lualine_x = { 'searchcount' },
-        lualine_y = { 'encoding', 'fileformat', },
+        lualine_y = {
+            { 'branch', fmt = prepend_git_icon, },
+            { 'fileformat', fmt = map_fileformat_icon, },
+            'encoding',
+        },
         lualine_z = { 'location', },
     },
     inactive_sections = {
