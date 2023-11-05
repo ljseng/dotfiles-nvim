@@ -22,7 +22,7 @@ require('lualine').setup {
     },
     tabline = {
         lualine_a = {
-            { 'buffers', mode = 4 },
+            { 'buffers', mode = 4, symbols = { modified = ' +', }, },
         },
         lualine_b = { },
         lualine_c = { },
