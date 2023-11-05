@@ -17,7 +17,7 @@ require('lualine').setup {
     options = {
         icons_enabled = false,
         disabled_filetypes = {
-            'NvimTree', 'oil', 'toggleterm',
+            'NvimTree', 'oil', 'toggleterm', 'aerial'
         },
     },
     tabline = {
@@ -34,7 +34,7 @@ require('lualine').setup {
         lualine_a = {
             { 'mode', fmt = get_str_first_char, },
         },
-        lualine_b = { { 'aerial', }, },
+        lualine_b = { { 'aerial', sep = '>', }, },
         lualine_c = { { 'diagnostics' } },
         lualine_x = { 'searchcount' },
         lualine_y = {

@@ -176,7 +176,7 @@ v.keymap.set('n', '<leader>fG', builtin.grep_string
 -- lsp related
 v.keymap.set('n', '<leader>fA', builtin.lsp_workspace_symbols
     , { desc = 'Telescope find LSP workspace symbols in the current working directory' })
-v.keymap.set('n', '<leader>fa', builtin.lsp_document_symbols
+v.keymap.set('n', '<leader>fa', function() require('telescope').extensions.aerial.aerial() end
     , { desc = 'Telescope find LSP document symbols in the current buffer' })
 v.keymap.set('n', '<leader>fi', builtin.lsp_implementations
     , { desc = 'Telescope find LSP implementations for the word under cursor' })
