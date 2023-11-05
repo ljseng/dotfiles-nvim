@@ -10,7 +10,6 @@ require('core/keymaps')
 if not vim.g.vscode then
     require('plugins/nvim-tree-cfg')
     require('plugins/lualine-cfg')
-    -- require('plugins/barbar-cfg')
     require('plugins/nvim-treesitter-cfg')
     require('plugins/lsp-cfg')
     require('plugins/toggleterm-cfg')
