@@ -140,7 +140,6 @@ map('n', 'N', 'Nzzzv')                          -- jump to previous search and c
 -- --------------------------------------------------------------------------------------------
 -- toggle
 -- --------------------------------------------------------------------------------------------
-map('n', '<leader>vc', ':NvimContextVtToggle<CR>')      -- toggle code context
 map('n', '<leader>vl', ':set list!<CR>')                -- show unprintable characters
 map('n', '<leader>vw', ':set wrap!<CR>')                -- toggle line wrap
 map('n', '<leader>vs', ':nohl<CR>')                     -- clear search highlight
