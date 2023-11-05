@@ -83,6 +83,11 @@ return require('packer').startup(function(use)
         'ThePrimeagen/harpoon',
     }
 
+    use {
+        'kevinhwang91/nvim-bqf',
+        ft = 'qf'
+    }
+
     -- indentation guideline
     use 'lukas-reineke/indent-blankline.nvim'
 

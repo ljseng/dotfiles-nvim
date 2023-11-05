@@ -17,7 +17,7 @@ require('lualine').setup {
     options = {
         icons_enabled = false,
         disabled_filetypes = {
-            'NvimTree', 'oil', 'toggleterm', 'aerial'
+            'NvimTree', 'oil', 'toggleterm', 'aerial', 'qf'
         },
     },
     tabline = {
