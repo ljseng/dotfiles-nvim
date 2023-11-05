@@ -57,6 +57,14 @@ map('n', '<leader>x', ':q<CR>')                 -- quit file
 map('n', '<leader>X', ':qa<CR>')                -- quit all
 
 -- --------------------------------------------------------------------------------------------
+-- more sensible search for word. favor none exact search. `G` to do exact search
+-- --------------------------------------------------------------------------------------------
+v.keymap.set('n', '*', 'g*' , { noremap=true, })
+v.keymap.set('n', '#', 'g#' , { noremap=true, })
+v.keymap.set('n', 'g*', '*' , { noremap=true, })
+v.keymap.set('n', 'g#', '#' , { noremap=true, })
+
+-- --------------------------------------------------------------------------------------------
 -- buffers management
 -- --------------------------------------------------------------------------------------------
 v.keymap.set('n', '<leader>bl', ':ls<CR>'
