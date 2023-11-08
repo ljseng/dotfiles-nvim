@@ -16,6 +16,14 @@ telescope.setup {
         },
         buffers = {
             disable_devicons = true,
+            mappings = {
+                i = {
+                    ["<C-Del>"] = "delete_buffer",
+                },
+                n = {
+                    ["<C-Del>"] = "delete_buffer",
+                },
+            },
         },
     },
 }
