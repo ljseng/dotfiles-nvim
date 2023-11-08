@@ -75,6 +75,10 @@ v.keymap.set('n', '<leader>bb', ':b '
     , { noremap=true, silent=false, desc='Open buffer [N] from buffer list. [N] could be buffer number or buffer name (can tab completion)' })
 v.keymap.set('n', '<leader>bd', ':bd '
     , { noremap=true, silent=false, desc='Delete buffer [N] from buffer list. [N] could be buffer number or buffer name (can tab completion)' })
+v.keymap.set('n', '<leader>bx', ':bd %<CR>'
+    , { noremap=true, silent=true, desc='Delete current buffer' })
+v.keymap.set('n', '<leader>bX', ':bd! %<CR>'
+    , { noremap=true, silent=true, desc='Delete current buffer and discard any unsaved changes' })
 v.keymap.set('n', '<leader>bn', ':bn<CR>'
     , { noremap=true, silent=true, desc='Next buffer' })
 v.keymap.set('n', '<leader>bN', ':bp<CR>'
