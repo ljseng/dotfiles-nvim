@@ -120,6 +120,9 @@ map('n', 'G', 'G0')                             -- go to bottom and first column
 v.keymap.set('n', '<leader>ez', '<Cmd>cd %:p:h<CR>'
     , { noremap=true, silent=true, desc='Change vim directory to current file' })
 
+v.keymap.set('n', '<F1>', '<Cmd>.!toilet -w 200 -f term -F border<CR>'
+    , { noremap=true, silent=true, desc='Enclose current line string with border' })
+
 -- quickfix
 map('n', '<leader>qq', '<Cmd>copen<CR>')                                      -- open quickfix
 map('n', '<leader>qQ', '<Cmd>cclose<CR>')                                     -- close quickfix
