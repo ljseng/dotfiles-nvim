@@ -79,9 +79,9 @@ v.keymap.set('n', '<leader>bx', ':bd %<CR>'
     , { noremap=true, silent=true, desc='Delete current buffer' })
 v.keymap.set('n', '<leader>bX', ':bd! %<CR>'
     , { noremap=true, silent=true, desc='Delete current buffer and discard any unsaved changes' })
-v.keymap.set('n', '<C-Right>', ':bn<CR>'
+v.keymap.set('n', ']b', ':bn<CR>'
     , { noremap=true, silent=true, desc='Next buffer' })
-v.keymap.set('n', '<C-Left>', ':bp<CR>'
+v.keymap.set('n', '[b', ':bp<CR>'
     , { noremap=true, silent=true, desc='Previous buffer' })
 
 -- split buffers
