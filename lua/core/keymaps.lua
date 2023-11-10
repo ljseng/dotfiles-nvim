@@ -79,9 +79,9 @@ v.keymap.set('n', '<leader>bx', ':bd %<CR>'
     , { noremap=true, silent=true, desc='Delete current buffer' })
 v.keymap.set('n', '<leader>bX', ':bd! %<CR>'
     , { noremap=true, silent=true, desc='Delete current buffer and discard any unsaved changes' })
-v.keymap.set('n', '<leader>bn', ':bn<CR>'
+v.keymap.set('n', '<C-Right>', ':bn<CR>'
     , { noremap=true, silent=true, desc='Next buffer' })
-v.keymap.set('n', '<leader>bN', ':bp<CR>'
+v.keymap.set('n', '<C-Left>', ':bp<CR>'
     , { noremap=true, silent=true, desc='Previous buffer' })
 
 -- split buffers
@@ -95,10 +95,10 @@ v.keymap.set('n', '<leader>et', '<C-w>v<C-w>T'
     , { noremap=true, silent=true, desc='Open current buffer at new tab' })
 
 -- resize buffers
-map('n', '<C-Right>', '<C-w>5>')               -- increase width by 5 columns
-map('n', '<C-Left>', '<C-w>5<')                -- decrease width by 5 columns
-map('n', '<C-Up>', '<C-w>5+')                  -- increase height by 5 rows
-map('n', '<C-Down>', '<C-w>5-')                -- decrease height by 5 rows
+map('n', '<A-Right>', '<C-w>5>')               -- increase width by 5 columns
+map('n', '<A-Left>', '<C-w>5<')                -- decrease width by 5 columns
+map('n', '<A-Up>', '<C-w>5+')                  -- increase height by 5 rows
+map('n', '<A-Down>', '<C-w>5-')                -- decrease height by 5 rows
 map('n', '<leader>e=', '<C-w>=')                -- make all window equal size
 
 -- moving around buffers
