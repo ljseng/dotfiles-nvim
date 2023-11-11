@@ -25,8 +25,6 @@ return require('packer').startup(function(use)
         'stevearc/oil.nvim',
     }
 
-    use 'LukasPietzschmann/telescope-tabs'
-
     use {
         'christoomey/vim-tmux-navigator'
     }
