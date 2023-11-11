@@ -59,10 +59,10 @@ map('n', '<leader>X', ':qa<CR>')                -- quit all
 -- --------------------------------------------------------------------------------------------
 -- more sensible search for word. favor none exact search. `G` to do exact search
 -- --------------------------------------------------------------------------------------------
-v.keymap.set('n', '*', 'g*' , { noremap=true, })
-v.keymap.set('n', '#', 'g#' , { noremap=true, })
-v.keymap.set('n', 'g*', '*' , { noremap=true, })
-v.keymap.set('n', 'g#', '#' , { noremap=true, })
+v.keymap.set('n', '*', 'g*N' , { noremap=true, })
+v.keymap.set('n', '#', 'g#N' , { noremap=true, })
+v.keymap.set('n', 'g*', '*N' , { noremap=true, })
+v.keymap.set('n', 'g#', '#N' , { noremap=true, })
 
 -- --------------------------------------------------------------------------------------------
 -- buffers management
