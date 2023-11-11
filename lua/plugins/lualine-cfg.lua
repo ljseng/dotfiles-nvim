@@ -34,8 +34,8 @@ require('lualine').setup {
         lualine_a = {
             { 'mode', fmt = get_str_first_char, },
         },
-        lualine_b = { { 'aerial', sep = '>', }, },
-        lualine_c = { { 'diagnostics' } },
+        lualine_b = { 'filename', { 'aerial', sep = '>', }, },
+        lualine_c = { 'diagnostics' },
         lualine_x = { 'searchcount' },
         lualine_y = {
             { 'branch', fmt = prepend_git_icon, },
@@ -46,8 +46,8 @@ require('lualine').setup {
     },
     inactive_sections = {
         lualine_a = { },
-        lualine_b = { },
-        lualine_c = { 'filename', },
+        lualine_b = { 'filename', },
+        lualine_c = { },
         lualine_x = { },
         lualine_y = { },
         lualine_z = { 'location', },
