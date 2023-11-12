@@ -1,5 +1,7 @@
+local v = vim
+
 local function toggle_marks_signcolumn()
-    vim.cmd('MarksToggleSign')
+    v.cmd('MarksToggleSign')
 end
 
 require('toggleterm').setup {
@@ -16,8 +18,10 @@ require('toggleterm').setup {
 local Terminal  = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 
-function _lazygit_toggle()
+function LAZYGIT_TOGGLE()
   lazygit:toggle()
 end
 
-vim.api.nvim_set_keymap("n", "<A-1>", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
+v.api.nvim_set_keymap("n", "<A-1>", "<cmd>lua LAZYGIT_TOGGLE()<CR>", {noremap = true, silent = true, desc = 'Toggleterm LazyGit'})
+v.api.nvim_set_keymap("n", "<leader>th", "<cmd>ToggleTerm size=15 direction=horizontal<CR>", {noremap = true, silent = true, desc = 'Toggleterm horizontal'})
+v.api.nvim_set_keymap("n", "<leader>tt", "<cmd>ToggleTerm direction=float<CR>", {noremap = true, silent = true, desc = 'Toggleterm float'})
