@@ -99,7 +99,7 @@ map('n', '<A-Right>', '<C-w>5>')               -- increase width by 5 columns
 map('n', '<A-Left>', '<C-w>5<')                -- decrease width by 5 columns
 map('n', '<A-Up>', '<C-w>5+')                  -- increase height by 5 rows
 map('n', '<A-Down>', '<C-w>5-')                -- decrease height by 5 rows
-map('n', '<leader>e=', '<C-w>=')                -- make all window equal size
+map('n', '<leader>e=', '<C-w>=')               -- make all window equal size
 
 -- moving around buffers
 map('n', '<leader>eh', '<C-w>h')                -- go to left buffer
