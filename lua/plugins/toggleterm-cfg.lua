@@ -7,6 +7,11 @@ end
 require('toggleterm').setup {
     direction = 'float',
     open_mapping = [[<A-\>]],
+    size = function(term)
+        if term.direction == 'horizontal' then return v.o.lines * 0.4
+        elseif term.direction == 'vertical' then return v.o.columns * 0.6
+        end
+    end,
     on_open = function(term)
         toggle_marks_signcolumn()
     end,
@@ -23,5 +28,6 @@ function LAZYGIT_TOGGLE()
 end
 
 v.api.nvim_set_keymap("n", "<A-1>", "<cmd>lua LAZYGIT_TOGGLE()<CR>", {noremap = true, silent = true, desc = 'Toggleterm LazyGit'})
-v.api.nvim_set_keymap("n", "<leader>th", "<cmd>ToggleTerm size=15 direction=horizontal<CR>", {noremap = true, silent = true, desc = 'Toggleterm horizontal'})
+v.api.nvim_set_keymap("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", {noremap = true, silent = true, desc = 'Toggleterm horizontal'})
+v.api.nvim_set_keymap("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", {noremap = true, silent = true, desc = 'Toggleterm vertical'})
 v.api.nvim_set_keymap("n", "<leader>tt", "<cmd>ToggleTerm direction=float<CR>", {noremap = true, silent = true, desc = 'Toggleterm float'})
