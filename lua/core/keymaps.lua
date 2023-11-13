@@ -208,6 +208,8 @@ v.keymap.set('n', '<leader>gs', builtin.git_stash
     , { desc = 'Telescope find git stash items in current repository with ability to apply them on <Cr>' })
 
 -- git related (fugitive)
+v.keymap.set('n', '<leader>gg', '<cmd>vert Git<CR>'
+    , { desc = ':Git vertically' })
 v.keymap.set('n', '<leader>gc', '<cmd>Git commit<CR>'
     , { desc = 'Git commit' })
 v.keymap.set('n', '<leader>gp', '<cmd>Git pull<CR>'
