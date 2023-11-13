@@ -22,6 +22,15 @@ return require('packer').startup(function(use)
     use 'sainnhe/everforest'
 
     use {
+        'kristijanhusak/vim-dadbod-ui',
+        requires = {
+            'tpope/vim-dadbod',
+            'kristijanhusak/vim-dadbod-completion',
+            'pbogut/vim-dadbod-ssh',
+        }
+    }
+
+    use {
         'stevearc/oil.nvim',
     }
 
