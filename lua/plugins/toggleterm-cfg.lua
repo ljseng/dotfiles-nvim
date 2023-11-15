@@ -28,9 +28,9 @@ function LAZYGIT_TOGGLE()
 end
 
 v.api.nvim_set_keymap("n", "<A-1>", "<cmd>lua LAZYGIT_TOGGLE()<CR>", {noremap = true, silent = true, desc = 'Toggleterm LazyGit'})
-v.api.nvim_set_keymap("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", {noremap = true, silent = true, desc = 'Toggleterm horizontal'})
-v.api.nvim_set_keymap("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", {noremap = true, silent = true, desc = 'Toggleterm vertical'})
-v.api.nvim_set_keymap("n", "<leader>tt", "<cmd>ToggleTerm direction=float<CR>", {noremap = true, silent = true, desc = 'Toggleterm float'})
+v.api.nvim_set_keymap("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal name=default<CR>", {noremap = true, silent = true, desc = 'Toggleterm horizontal'})
+v.api.nvim_set_keymap("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical name=default<CR>", {noremap = true, silent = true, desc = 'Toggleterm vertical'})
+v.api.nvim_set_keymap("n", "<leader>tt", "<cmd>ToggleTerm direction=float name=default<CR>", {noremap = true, silent = true, desc = 'Toggleterm float'})
 
 function _G.set_terminal_keymaps()
     local opts = {buffer = 0}
