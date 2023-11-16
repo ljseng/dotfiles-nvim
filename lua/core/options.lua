@@ -39,7 +39,7 @@ o.foldexpr       = 'nvim_treesitter#foldexpr()'    -- code folding using treesit
 o.foldcolumn     = 'auto'                          -- code fold column show when there is fold
 o.foldlevel      = 20                              -- code fold level to prevent open file with all folds closed
 o.foldlevelstart = 20                              -- code fold level to prevent open file with all folds closed
-o.listchars      = 'eol:↴,space:⋅'                 -- to better identify whitespace
+o.listchars      = 'eol:¶,space:␣'                 -- to better identify whitespace
 o.signcolumn     = 'auto:4'                        -- auto resize sign column up to given number. for: gitsigns, marks
 o.cursorline     = true                            -- highlight cursorline
 
