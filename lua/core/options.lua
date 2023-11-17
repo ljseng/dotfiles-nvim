@@ -42,12 +42,9 @@ o.foldlevelstart = 20                              -- code fold level to prevent
 o.listchars      = 'eol:¶,space:␣,tab:→ ,nbsp:▒'   -- to better identify whitespace
 o.signcolumn     = 'auto:4'                        -- auto resize sign column up to given number. for: gitsigns, marks
 o.cursorline     = true                            -- highlight cursorline
+o.termguicolors = true
 
 o.spelllang = {'en_gb','en_us'}                    -- use Great Britain spelling language
-
--- colorscheme with plugin
-o.termguicolors = true
-vim.cmd('colorscheme everforest')
 
 -- searching
 o.hlsearch = true

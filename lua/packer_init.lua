@@ -19,7 +19,9 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- colorscheme
-    use 'sainnhe/everforest'
+    use {
+        'rebelot/kanagawa.nvim',
+    }
 
     use {
         'kristijanhusak/vim-dadbod-ui',

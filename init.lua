@@ -8,6 +8,7 @@ require('core/keymaps')
 
 -- plugin specific configuration
 if not vim.g.vscode then
+    require('plugins/colorscheme-cfg')
     require('plugins/nvim-tree-cfg')
     require('plugins/lualine-cfg')
     require('plugins/nvim-treesitter-cfg')
