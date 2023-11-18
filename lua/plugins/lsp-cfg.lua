@@ -5,7 +5,7 @@ require('mason-lspconfig').setup {
         "emmet_ls",
         "hls@1.8.0",
         "lua_ls",
-        "phpactor",
+        "intelephense",
         "tsserver",
         "rust_analyzer",
     },
@@ -102,7 +102,7 @@ cmp.setup.cmdline(':', {
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require('lspconfig').phpactor.setup {
+require('lspconfig').intelephense.setup {
     root_dir = function() return vim.loop.cwd() end,
     on_attach = on_attach,
     capabilities = capabilities
