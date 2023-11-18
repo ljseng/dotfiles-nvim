@@ -19,9 +19,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- colorscheme
-    use {
-        'rebelot/kanagawa.nvim',
-    }
+    use 'AlexvZyl/nordic.nvim'
 
     use {
         'kristijanhusak/vim-dadbod-ui',
