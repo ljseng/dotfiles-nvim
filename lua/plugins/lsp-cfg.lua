@@ -1,3 +1,5 @@
+local v = vim
+
 require('mason').setup()
 
 require('mason-lspconfig').setup {
@@ -16,16 +18,20 @@ require('mason-lspconfig').setup {
 -- use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+    v.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
     local bufopts = { noremap=true, silent=true, buffer=bufnr }
 
-    vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition, bufopts)
-    vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, bufopts)
-    vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', '<leader>ln', vim.lsp.buf.rename, bufopts)
-    vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, bufopts)
+    v.keymap.set('n', '<leader>ld', v.lsp.buf.definition, bufopts)
+    v.keymap.set('n', '<leader>lD', v.lsp.buf.declaration, bufopts)
+    v.keymap.set('n', '<leader>lk', v.lsp.buf.hover, bufopts)
+    v.keymap.set('n', '<leader>lK', function() v.lsp.buf.signature_help() end, bufopts)
+    v.keymap.set('n', '<leader>ln', v.lsp.buf.rename, bufopts)
+    v.keymap.set('n', '<leader>lc', v.lsp.buf.code_action, bufopts)
 
+    require "lsp_signature".on_attach({
+        hint_prefix = "*",
+    }, bufnr)
 end
 
 -- autocomplete specific settings

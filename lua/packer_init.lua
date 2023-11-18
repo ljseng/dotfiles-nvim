@@ -66,6 +66,8 @@ return require('packer').startup(function(use)
     -- for rust lsp
     use 'simrat39/rust-tools.nvim'
 
+    use 'ray-x/lsp_signature.nvim'
+
     -- autocomplete
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
