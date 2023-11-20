@@ -166,14 +166,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    use({
-        "epwalsh/obsidian.nvim",
-        requires = {
-            -- Required.
-            "nvim-lua/plenary.nvim",
-        },
-    })
-
     -- automatically set up configuration after cloning packer.nvim
     -- put this at the end after all plugins
     if packer_bootstrap then
