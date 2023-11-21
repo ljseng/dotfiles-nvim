@@ -7,7 +7,6 @@ require("oil").setup {
     },
     default_file_explorer = false, -- oil will not take over directory buffers (e.g. `vim .` or `:e src/`
     delete_to_trash = true, -- deleted files will be removed with the trash_command (below)
-    trash_command = "trash-put", -- change this to customize the command used when deleting to trash
     keymaps = {
         ["g?"] = "actions.show_help",
         ["g."] = "actions.toggle_hidden",
