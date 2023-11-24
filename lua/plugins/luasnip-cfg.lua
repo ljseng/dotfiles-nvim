@@ -111,5 +111,14 @@ ls.add_snippets(nil, {
             text({'', '# braindump', ''}),             -- any progressive update
             text({'', '# post-mortem', ''}),          -- concise summary. include action taken
         }),
+    },
+    sh = {
+        snip({
+            trig = '@shebang',
+            name = 'Shell script shebang bash',
+            dscr = 'Shell script shebang bash',
+        },{
+            text({'#!/bin/bash'}),
+        }),
     }
 })
