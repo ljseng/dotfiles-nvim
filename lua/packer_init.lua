@@ -153,6 +153,9 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- diff directory
+    use 'will133/vim-dirdiff'
+
     -- handy git wrapper
     use 'tpope/vim-fugitive'
 
